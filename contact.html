@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>संपर्क करें — Gangauli Times</title>
+  <meta name="description" content="Contact Gangauli Times — reach out to us for news, information, or to share your story about Gangauli village, Ghazipur, UP." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    .file-upload-zone {
+      border: 2px dashed var(--gray-300);
+      border-radius: 12px;
+      padding: 26px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color .2s, background .2s;
+      background: #fafafa;
+      position: relative;
+    }
+    .file-upload-zone:hover, .file-upload-zone.drag-over {
+      border-color: var(--red-primary);
+      background: rgba(204,0,0,0.03);
+    }
+    .file-upload-zone input[type="file"] {
+      position: absolute; inset: 0; opacity: 0;
+      cursor: pointer; width: 100%; height: 100%;
+    }
+    .file-upload-icon { font-size: 34px; color: var(--gray-400); margin-bottom: 8px; }
+    .file-upload-text { font-size: 14px; color: var(--gray-500); line-height: 1.6; }
+    .file-upload-text strong { color: var(--red-primary); }
+    #file-preview {
+      margin-top: 10px; background: rgba(22,101,52,0.08);
+      border: 1px solid rgba(22,101,52,0.2); border-radius: 10px;
+      padding: 10px 14px; font-size: 13px; font-weight: 600;
+      color: #166534; align-items: center; gap: 10px; display: none;
+    }
+    #file-error { display:none; color:#dc2626; font-size:13px; margin-top:6px; font-weight:600; }
+    #form-success {
+      display:none; background:#dcfce7; border:1px solid #86efac;
+      border-radius:12px; padding:16px 20px; color:#166534;
+      font-size:15px; font-weight:600; text-align:center; margin-top:16px;
+    }
+    #form-error-msg {
+      display:none; background:#fee2e2; border:1px solid #fca5a5;
+      border-radius:12px; padding:16px 20px; color:#991b1b;
+      font-size:15px; font-weight:600; text-align:center; margin-top:16px;
+    }
+    .contact-grid { display:grid; grid-template-columns:1fr 1.4fr; gap:40px; align-items:start; }
+    @media(max-width:900px) { .contact-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body class="lang-hi">
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Main Navigation">
+  <div class="container">
+    <a href="index.html" class="navbar-brand">
+      <img src="logo.png" alt="Gangauli Times Logo" class="navbar-logo" />
+    </a>
+    <ul class="navbar-nav">
+      <li><a href="index.html" class="nav-link"><span class="en">Home</span><span class="hi">होम</span></a></li>
+      <li><a href="gram-pradhan.html" class="nav-link"><span class="en">Gram Pradhan</span><span class="hi">ग्राम प्रधान</span></a></li>
+      <li><a href="bdc-members.html" class="nav-link"><span class="en">BDC Members</span><span class="hi">बी.डी.सी. सदस्य</span></a></li>
+      <li><a href="history.html" class="nav-link"><span class="en">Village History</span><span class="hi">गाँव का इतिहास</span></a></li>
+      <li><a href="schools.html" class="nav-link"><span class="en">Schools</span><span class="hi">स्कूल</span></a></li>
+      <li><a href="gallery.html" class="nav-link"><span class="en">Gallery</span><span class="hi">गैलरी</span></a></li>
+      <li><a href="contact.html" class="nav-link active"><span class="en">Contact</span><span class="hi">संपर्क करें</span></a></li>
+    </ul>
+    <div class="navbar-lang" id="navbar-lang">
+      <button class="nav-lang-btn" id="lang-en" title="English">EN</button>
+      <span class="nav-lang-divider">|</span>
+      <button class="nav-lang-btn active" id="lang-hi" title="हिंदी">HI</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle Mobile Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html" class="nav-link"><span class="en">Home</span><span class="hi">होम</span></a>
+    <a href="gram-pradhan.html" class="nav-link"><span class="en">Gram Pradhan</span><span class="hi">ग्राम प्रधान</span></a>
+    <a href="bdc-members.html" class="nav-link"><span class="en">BDC Members</span><span class="hi">बी.डी.सी. सदस्य</span></a>
+    <a href="history.html" class="nav-link"><span class="en">Village History</span><span class="hi">गाँव का इतिहास</span></a>
+    <a href="schools.html" class="nav-link"><span class="en">Schools</span><span class="hi">स्कूल</span></a>
+    <a href="gallery.html" class="nav-link"><span class="en">Gallery</span><span class="hi">गैलरी</span></a>
+    <a href="contact.html" class="nav-link"><span class="en">Contact</span><span class="hi">संपर्क करें</span></a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-content">
+    <div class="page-hero-breadcrumb">
+      <a href="index.html"><span class="en">Home</span><span class="hi">होम</span></a><span>/</span>
+      <span class="en">Contact Us</span><span class="hi">संपर्क करें</span>
+    </div>
+    <h1><span class="en">Get in Touch</span><span class="hi">हमसे संपर्क करें</span></h1>
+    <p>
+      <span class="en">We'd love to hear from you — share your news, stories, or feedback about Gangauli.</span>
+      <span class="hi">हम आपसे सुनना चाहेंगे — गंगौली के बारे में अपनी खबर, कहानियाँ या प्रतिक्रिया साझा करें।</span>
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Info Panel -->
+      <div class="contact-info-card reveal">
+        <div style="position:relative;z-index:1;">
+          <span class="section-label" style="background:rgba(204,0,0,0.2);border-color:rgba(204,0,0,0.4);">
+            <span class="en">Contact Information</span><span class="hi">संपर्क जानकारी</span>
+          </span>
+          <h2 style="font-size:28px;color:var(--white);margin:14px 0 10px;">
+            <span class="en">Reach Out to Us</span><span class="hi">हम तक पहुँचें</span>
+          </h2>
+          <p style="color:rgba(255,255,255,0.6);font-size:15px;line-height:1.8;margin-bottom:32px;">
+            <span class="en">Whether you have a news tip, want to share a story, or simply want to connect — we're here for you.</span>
+            <span class="hi">चाहे आपके पास कोई समाचार सुझाव हो, कोई कहानी साझा करनी हो — हम आपके लिए यहाँ हैं।</span>
+          </p>
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <div class="contact-info-label"><span class="en">Address</span><span class="hi">पता</span></div>
+              <div class="contact-info-value">
+                <span class="en">Gram &amp; Post Gangauli, Block Kasimabad,<br/>District Ghazipur, Uttar Pradesh — 233222</span>
+                <span class="hi">ग्राम व पोस्ट गंगौली, ब्लॉक कासिमाबाद,<br/>जिला गाजीपुर, उत्तर प्रदेश — 233222</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <div class="contact-info-label"><span class="en">Phone (Gram Pradhan)</span><span class="hi">फोन (ग्राम प्रधान)</span></div>
+              <div class="contact-info-value"><a href="tel:+918400973132" style="color:inherit;text-decoration:none;">+91 84009 73132</a></div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <div class="contact-info-label"><span class="en">Email</span><span class="hi">ईमेल</span></div>
+              <div class="contact-info-value">info.gangaulitimes@gmail.com</div>
+            </div>
+          </div>
+          <div class="contact-info-item" style="border:none;margin-bottom:0;">
+            <div class="contact-info-icon"><i class="fa-regular fa-clock"></i></div>
+            <div>
+              <div class="contact-info-label"><span class="en">Working Hours</span><span class="hi">कार्य समय</span></div>
+              <div class="contact-info-value">
+                <span class="en">Monday – Saturday: 9:00 AM – 6:00 PM</span>
+                <span class="hi">सोमवार – शनिवार: सुबह 9:00 – शाम 6:00</span>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1);">
+            <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:14px;">
+              <span class="en">Follow Us</span><span class="hi">हमें फॉलो करें</span>
+            </div>
+            <div style="display:flex;gap:12px;">
+              <a href="https://www.facebook.com/gangaulitimes" target="_blank" rel="noopener" class="footer-social-btn facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/gangaulitimes" target="_blank" rel="noopener" class="footer-social-btn instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.youtube.com/@GangauliTimes" target="_blank" rel="noopener" class="footer-social-btn youtube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-card reveal reveal-delay-2">
+        <span class="section-label"><span class="en">Send a Message</span><span class="hi">संदेश भेजें</span></span>
+        <h2 style="font-size:26px;margin:12px 0 6px;">
+          <span class="en">Write to Us</span><span class="hi">हमें लिखें</span>
+        </h2>
+        <p style="font-size:15px;color:var(--gray-500);margin-bottom:28px;line-height:1.7;">
+          <span class="en">Fill out the form and we'll get back to you as soon as possible.</span>
+          <span class="hi">फॉर्म भरें और हम जल्द से जल्द आपसे संपर्क करेंगे।</span>
+        </p>
+
+        <form id="contact-form" novalidate>
+          <!-- Web3Forms hidden fields -->
+          <input type="hidden" name="access_key" value="6971ccb7-36f8-477c-bacd-cb6d3609abe7" />
+          <input type="hidden" name="subject" value="Gangauli Times — नया संदेश" />
+          <input type="hidden" name="from_name" value="Gangauli Times Website" />
+          <input type="hidden" name="redirect" value="false" />
+          <input type="checkbox" name="botcheck" style="display:none;" />
+
+          <!-- Name + Phone -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">
+                <span class="en">Full Name *</span><span class="hi">पूरा नाम *</span>
+              </label>
+              <input type="text" id="contact-name" name="name" class="form-control"
+                     placeholder="आपका नाम"
+                     data-ph-hi="आपका नाम" data-ph-en="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-phone">
+                <span class="en">Phone Number</span><span class="hi">फोन नंबर</span>
+              </label>
+              <input type="tel" id="contact-phone" name="phone" class="form-control"
+                     placeholder="+91 XXXXX XXXXX"
+                     data-ph-hi="+91 XXXXX XXXXX" data-ph-en="+91 XXXXX XXXXX" />
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label class="form-label" for="contact-email">
+              <span class="en">Email Address</span><span class="hi">ईमेल पता</span>
+            </label>
+            <input type="email" id="contact-email" name="email" class="form-control"
+                   placeholder="आपकी ईमेल (वैकल्पिक)"
+                   data-ph-hi="आपकी ईमेल (वैकल्पिक)" data-ph-en="your@email.com (optional)" />
+          </div>
+
+          <!-- Subject -->
+          <div class="form-group">
+            <label class="form-label" for="contact-subject">
+              <span class="en">Subject</span><span class="hi">विषय</span>
+            </label>
+            <select id="contact-subject" name="subject_type" class="form-control">
+              <option value="" data-hi="विषय चुनें" data-en="Select a subject">विषय चुनें</option>
+              <option value="news" data-hi="समाचार / जानकारी" data-en="News / Information">समाचार / जानकारी</option>
+              <option value="feedback" data-hi="प्रतिक्रिया" data-en="Feedback">प्रतिक्रिया</option>
+              <option value="photos" data-hi="तस्वीरें साझा करें" data-en="Share Photos">तस्वीरें साझा करें</option>
+              <option value="complaint" data-hi="शिकायत / समस्या" data-en="Complaint / Issue">शिकायत / समस्या</option>
+              <option value="other" data-hi="अन्य" data-en="Other">अन्य</option>
+            </select>
+          </div>
+
+          <!-- Message -->
+          <div class="form-group">
+            <label class="form-label" for="contact-message">
+              <span class="en">Your Message *</span><span class="hi">आपका संदेश *</span>
+            </label>
+            <textarea id="contact-message" name="message" class="form-control" rows="5"
+                      placeholder="अपना संदेश यहाँ लिखें..."
+                      data-ph-hi="अपना संदेश यहाँ लिखें..." data-ph-en="Write your message here..." required></textarea>
+          </div>
+
+          <!-- File Upload -->
+          <div class="form-group">
+            <label class="form-label">
+              <span class="en">Attach File <small style="font-weight:400;color:var(--gray-400);">(optional — JPG, PNG, WEBP, PDF — max 10 MB)</small></span>
+              <span class="hi">फ़ाइल संलग्न करें <small style="font-weight:400;color:var(--gray-400);">(वैकल्पिक — अधिकतम 10 MB)</small></span>
+            </label>
+            <div class="file-upload-zone" id="file-upload-zone">
+              <input type="file" id="contact-file" name="attachment"
+                     accept=".jpg,.jpeg,.png,.webp,.pdf" />
+              <div class="file-upload-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+              <div class="file-upload-text">
+                <span class="en"><strong>Click to upload</strong> or drag &amp; drop<br/><small>JPG, PNG, WEBP, PDF — max 10 MB</small></span>
+                <span class="hi"><strong>क्लिक करें</strong> या यहाँ खींचें<br/><small>JPG, PNG, WEBP, PDF — अधिकतम 10 MB</small></span>
+              </div>
+            </div>
+            <div id="file-preview">
+              <i class="fa-solid fa-file-circle-check" style="font-size:16px;"></i>
+              <span id="file-name"></span>
+              <button type="button" id="file-remove" style="margin-left:auto;background:none;border:none;cursor:pointer;color:#991b1b;font-size:14px;" title="Remove">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div id="file-error">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <span class="en"> File too large (max 10 MB). Please choose a smaller file.</span>
+              <span class="hi"> फ़ाइल बहुत बड़ी है (अधिकतम 10 MB)।</span>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" id="submit-btn" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;font-size:16px;">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span class="en">Send Message</span><span class="hi">संदेश भेजें</span>
+          </button>
+
+          <div id="form-success">
+            <i class="fa-solid fa-circle-check" style="font-size:20px;"></i>&nbsp;
+            <span class="en">Message sent successfully! We'll get back to you soon.</span>
+            <span class="hi">संदेश सफलतापूर्वक भेज दिया गया! हम जल्द ही संपर्क करेंगे।</span>
+          </div>
+          <div id="form-error-msg">
+            <i class="fa-solid fa-circle-xmark" style="font-size:20px;"></i>&nbsp;
+            <span class="en">Something went wrong. Please try again or email us directly.</span>
+            <span class="hi">कुछ गलत हुआ। पुनः प्रयास करें या सीधे ईमेल करें।</span>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Map — Gangauli, Ghazipur 233222 -->
+    <div class="reveal" style="margin-top:70px;">
+      <div style="border-radius:20px;overflow:hidden;height:380px;position:relative;box-shadow:var(--shadow-md);">
+        <iframe
+          src="https://maps.google.com/maps?q=Gangauli%2C+Ghazipur%2C+Uttar+Pradesh+233222&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          width="100%" height="380" style="border:0;display:block;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Gangauli, Ghazipur Location Map">
+        </iframe>
+        <div style="position:absolute;top:18px;left:18px;background:#fff;padding:10px 18px;border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,0.15);display:flex;align-items:center;gap:10px;z-index:1;">
+          <i class="fa-solid fa-map-pin" style="color:var(--red-primary);font-size:18px;"></i>
+          <div>
+            <div style="font-size:14px;font-weight:800;color:#111;"><span class="en">Gangauli, Ghazipur</span><span class="hi">गंगौली, गाजीपुर</span></div>
+            <div style="font-size:12px;color:#666;">Uttar Pradesh — 233222</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="logo_full.png" alt="Gangauli Times" class="footer-logo-img" />
+        <p class="footer-desc">
+          <span class="en">Gangauli is a historic village in Ghazipur district, Uttar Pradesh — famous as the birthplace of Dr. Rahi Masoom Raza.</span>
+          <span class="hi">गंगौली गाजीपुर जिले, उत्तर प्रदेश का एक ऐतिहासिक गाँव है, जो डॉ. राही मासूम रज़ा के जन्मस्थान के रूप में प्रसिद्ध है।</span>
+        </p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/gangaulitimes" target="_blank" rel="noopener" class="footer-social-btn facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/gangaulitimes" target="_blank" rel="noopener" class="footer-social-btn instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@GangauliTimes" target="_blank" rel="noopener" class="footer-social-btn youtube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading"><span class="en">Quick Links</span><span class="hi">त्वरित लिंक</span></h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><span class="en">Home</span><span class="hi">होम</span></a></li>
+          <li><a href="gram-pradhan.html"><span class="en">Gram Pradhan</span><span class="hi">ग्राम प्रधान</span></a></li>
+          <li><a href="bdc-members.html"><span class="en">BDC Members</span><span class="hi">बी.डी.सी. सदस्य</span></a></li>
+          <li><a href="history.html"><span class="en">Village History</span><span class="hi">गाँव का इतिहास</span></a></li>
+          <li><a href="schools.html"><span class="en">Schools</span><span class="hi">स्कूल</span></a></li>
+          <li><a href="contact.html"><span class="en">Contact</span><span class="hi">संपर्क करें</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading"><span class="en">Explore</span><span class="hi">अन्वेषण करें</span></h4>
+        <ul class="footer-links">
+          <li><a href="gallery.html"><span class="en">Photo Gallery</span><span class="hi">फोटो गैलरी</span></a></li>
+          <li><a href="history.html"><span class="en">Village History</span><span class="hi">गाँव का इतिहास</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading"><span class="en">Contact Us</span><span class="hi">संपर्क करें</span></h4>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="footer-contact-text">
+            <span class="en">Gangauli, Kasimabad, Ghazipur, UP — 233222</span>
+            <span class="hi">गंगौली, कासिमाबाद, गाजीपुर, उ.प्र. — 233222</span>
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="footer-contact-text">info.gangaulitimes@gmail.com</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+      <span><span class="en">&copy; 2025 Gangauli Times.</span><span class="hi">&copy; 2025 गंगौली टाइम्स।</span></span>
+      <span><span class="en">Made with <span style="color:var(--red-primary);">&#10084;</span> for Gangauli</span><span class="hi">गंगौली के लिए <span style="color:var(--red-primary);">&#10084;</span> से बनाया</span></span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-chevron-up"></i></button>
+<script src="main.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  /* ---- Language-responsive placeholders & select options ---- */
+  function updateLang(lang) {
+    document.querySelectorAll('[data-ph-hi][data-ph-en]').forEach(function (el) {
+      el.placeholder = (lang === 'en') ? el.getAttribute('data-ph-en') : el.getAttribute('data-ph-hi');
+    });
+    var sel = document.getElementById('contact-subject');
+    if (sel) {
+      Array.from(sel.options).forEach(function (opt) {
+        var txt = (lang === 'en') ? opt.getAttribute('data-en') : opt.getAttribute('data-hi');
+        if (txt) opt.text = txt;
+      });
+    }
+  }
+
+  // Watch body class for language change
+  new MutationObserver(function (muts) {
+    muts.forEach(function (m) {
+      if (m.attributeName === 'class') {
+        updateLang(document.body.classList.contains('lang-en') ? 'en' : 'hi');
+      }
+    });
+  }).observe(document.body, { attributes: true });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    updateLang(document.body.classList.contains('lang-en') ? 'en' : 'hi');
+
+    /* ---- File upload ---- */
+    var fileInput  = document.getElementById('contact-file');
+    var filePreview = document.getElementById('file-preview');
+    var fileNameEl  = document.getElementById('file-name');
+    var fileError   = document.getElementById('file-error');
+    var fileRemove  = document.getElementById('file-remove');
+    var zone        = document.getElementById('file-upload-zone');
+    var MAX         = 10 * 1024 * 1024;
+
+    function showFile(file) {
+      fileError.style.display = 'none';
+      if (!file) return;
+      if (file.size > MAX) {
+        fileError.style.display = 'block';
+        filePreview.style.display = 'none';
+        fileInput.value = '';
+        return;
+      }
+      fileNameEl.textContent = file.name + ' (' + (file.size / 1024 / 1024).toFixed(2) + ' MB)';
+      filePreview.style.display = 'flex';
+    }
+
+    if (fileInput)  fileInput.addEventListener('change', function () { showFile(this.files[0]); });
+    if (fileRemove) fileRemove.addEventListener('click', function (e) {
+      e.stopPropagation();
+      fileInput.value = '';
+      filePreview.style.display = 'none';
+      fileError.style.display   = 'none';
+    });
+    if (zone) {
+      zone.addEventListener('dragover',  function (e) { e.preventDefault(); zone.classList.add('drag-over'); });
+      zone.addEventListener('dragleave', function ()  { zone.classList.remove('drag-over'); });
+      zone.addEventListener('drop', function (e) {
+        e.preventDefault(); zone.classList.remove('drag-over');
+        var file = e.dataTransfer.files[0];
+        if (!file) return;
+        if (!['image/jpeg','image/png','image/webp','application/pdf'].includes(file.type)) {
+          fileError.style.display = 'block'; return;
+        }
+        var dt = new DataTransfer(); dt.items.add(file);
+        fileInput.files = dt.files;
+        showFile(file);
+      });
+    }
+
+    /* ---- Form submit via Web3Forms ---- */
+    var form       = document.getElementById('contact-form');
+    var submitBtn  = document.getElementById('submit-btn');
+    var successMsg = document.getElementById('form-success');
+    var errorMsg   = document.getElementById('form-error-msg');
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // File size check
+      var f = fileInput && fileInput.files[0];
+      if (f && f.size > MAX) { fileError.style.display = 'block'; return; }
+
+      // If access key not set yet → mailto fallback
+      var keyVal = (form.querySelector('[name="access_key"]') || {}).value || '';
+      if (!keyVal || keyVal === 'YOUR_ACCESS_KEY') {
+        var name = document.getElementById('contact-name').value;
+        var ph   = document.getElementById('contact-phone').value;
+        var em   = document.getElementById('contact-email').value;
+        var sub  = document.getElementById('contact-subject').value;
+        var msg  = document.getElementById('contact-message').value;
+        var body = 'नाम: ' + name + '\nफोन: ' + ph + '\nEmail: ' + em + '\nविषय: ' + sub + '\n\nसंदेश:\n' + msg;
+        window.location.href = 'mailto:info.gangaulitimes@gmail.com?subject=Gangauli Times Contact&body=' + encodeURIComponent(body);
+        return;
+      }
+
+      // Web3Forms submit
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span class="en">Sending...</span><span class="hi">भेजा जा रहा है...</span>';
+      successMsg.style.display = 'none';
+      errorMsg.style.display   = 'none';
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(form)
+      })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data.success) {
+          successMsg.style.display = 'block';
+          successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          form.reset();
+          if (filePreview) filePreview.style.display = 'none';
+        } else {
+          errorMsg.style.display = 'block';
+        }
+      })
+      .catch(function () { errorMsg.style.display = 'block'; })
+      .finally(function () {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> <span class="en">Send Message</span><span class="hi">संदेश भेजें</span>';
+      });
+    });
+  });
+}());
+</script>
+</body>
+</html>

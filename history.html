@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Village History — Gangauli Times</title>
+  <meta name="description" content="Discover the rich history of Gangauli — birthplace of Dr. Rahi Masoom Raza, author of Aadha Gaon. Explore the village's cultural heritage and literary legacy." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <style>
+
+    /* ===== DR. RAHI MASOOM RAZA — JIWANI SECTION STYLES ===== */
+    .raza-jiwani-section {
+      background: var(--white);
+      border-radius: 24px;
+      overflow: hidden;
+      margin-bottom: 70px;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.10);
+      border: 1px solid var(--gray-200);
+    }
+    .rjw-header {
+      background: linear-gradient(135deg, #1a0000 0%, #2d0000 50%, #1a0000 100%);
+      padding: 44px 50px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .rjw-header::before {
+      content: '\201C';
+      position: absolute;
+      right: 40px;
+      top: -20px;
+      font-size: 200px;
+      color: rgba(204,0,0,0.12);
+      font-family: Georgia, serif;
+      line-height: 1;
+      pointer-events: none;
+    }
+    .rjw-header-label {
+      display: inline-block;
+      background: rgba(201,168,76,0.2);
+      border: 1px solid rgba(201,168,76,0.5);
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 18px;
+      border-radius: 100px;
+      margin-bottom: 14px;
+    }
+    body.lang-hi .rjw-header-label { letter-spacing: 0.5px; font-family: var(--font-hindi-body); }
+    .rjw-header h2 {
+      font-size: clamp(26px, 3vw, 38px);
+      color: var(--white);
+      margin-bottom: 10px;
+      font-weight: 900;
+    }
+    .rjw-header-sub {
+      color: var(--gold);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .rjw-body {
+      padding: 50px;
+    }
+    /* Point sections */
+    .rjw-point-section {
+      margin-bottom: 44px;
+    }
+    .rjw-point-section:last-child { margin-bottom: 0; }
+    .rjw-ps-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--gray-100);
+    }
+    .rjw-ps-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+      color: var(--white);
+    }
+    .rjw-ps-icon.red   { background: linear-gradient(135deg, var(--red-primary), var(--red-dark)); }
+    .rjw-ps-icon.gold  { background: linear-gradient(135deg, #C9A84C, #a07a20); }
+    .rjw-ps-icon.dark  { background: linear-gradient(135deg, #1a1a1a, #333); }
+    .rjw-ps-icon.blue  { background: linear-gradient(135deg, #1e6fad, #0d4a7a); }
+    .rjw-ps-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--black);
+      margin: 0;
+    }
+    body.lang-hi .rjw-ps-title { font-family: var(--font-hindi-heading); }
+    /* Bullet list */
+    .rjw-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .rjw-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--gray-700);
+    }
+    body.lang-hi .rjw-list li { font-family: var(--font-hindi-body); font-size: 16px; }
+    .rjw-bullet {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--red-primary);
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+    .rjw-bullet.gold { background: var(--gold); }
+    /* Book cards grid */
+    .rjw-books-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 16px;
+      margin-top: 4px;
+    }
+    .rjw-book-card {
+      background: var(--gray-100);
+      border-radius: 14px;
+      padding: 20px 18px;
+      border: 1px solid var(--gray-200);
+      border-top: 3px solid var(--red-primary);
+      transition: var(--transition);
+    }
+    .rjw-book-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-top-color: var(--gold);
+    }
+    .rjw-book-card.featured {
+      background: linear-gradient(135deg, #fff5f5, #fff);
+      border-color: rgba(204,0,0,0.2);
+      border-top: 3px solid var(--gold);
+    }
+    .rjw-book-year {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--red-primary);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .rjw-book-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+    body.lang-hi .rjw-book-title { font-family: var(--font-hindi-heading); }
+    .rjw-book-desc {
+      font-size: 12.5px;
+      color: var(--gray-500);
+      line-height: 1.75;
+    }
+    body.lang-hi .rjw-book-desc { font-family: var(--font-hindi-body); font-size: 13px; }
+    /* Quote box */
+    .rjw-quote {
+      background: linear-gradient(135deg, #fff8f0, #fffbf5);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+      padding: 22px 24px;
+      margin: 20px 0;
+      position: relative;
+    }
+    .rjw-quote-text {
+      font-size: 15px;
+      font-style: italic;
+      color: var(--gray-700);
+      line-height: 1.9;
+    }
+    body.lang-hi .rjw-quote-text { font-family: var(--font-hindi-body); font-size: 16px; }
+    /* Mahabharat special card */
+    .rjw-mb-card {
+      background: linear-gradient(135deg, #0d1a2e 0%, #162540 100%);
+      border-radius: 18px;
+      padding: 36px 40px;
+      color: var(--white);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 30px;
+      align-items: center;
+      margin-top: 4px;
+      border: 1px solid rgba(255,215,0,0.15);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    }
+    .rjw-mb-icon-wrap {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f0a000, #c07000);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+      flex-shrink: 0;
+      box-shadow: 0 0 0 8px rgba(240,160,0,0.15);
+    }
+    .rjw-mb-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: #ffd700;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    body.lang-hi .rjw-mb-title { font-family: var(--font-hindi-heading); }
+    .rjw-mb-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .rjw-mb-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.7;
+    }
+    body.lang-hi .rjw-mb-list li { font-family: var(--font-hindi-body); font-size: 15px; }
+    .rjw-mb-bullet {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #ffd700;
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+    /* divider */
+    .rjw-divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gray-200), transparent);
+      margin: 36px 0;
+    }
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+      .rjw-header { padding: 28px 20px 24px; }
+      .rjw-body { padding: 24px 18px; }
+      .rjw-books-grid { grid-template-columns: 1fr 1fr; }
+      .rjw-mb-card { grid-template-columns: 1fr; text-align: center; padding: 24px 18px; gap: 16px; }
+      .rjw-mb-icon-wrap { margin: 0 auto; }
+    }
+    @media (max-width: 480px) {
+      .rjw-books-grid { grid-template-columns: 1fr; }
+    }
+
+    .raza-profile {
+      background: linear-gradient(135deg, #1a0000 0%, #2d0000 40%, #1a0000 70%, #0d0000 100%);
+      border-radius: 20px;
+      padding: 50px;
+      color: var(--white);
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 50px;
+      align-items: center;
+      margin-bottom: 70px;
+      border: 1px solid rgba(204,0,0,0.25);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+    .raza-img-col {
+      text-align: center;
+    }
+    .raza-img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      border: 4px solid var(--red-primary);
+      box-shadow: 0 0 0 8px rgba(204,0,0,0.2), 0 0 0 16px rgba(204,0,0,0.08);
+    }
+    .raza-name { font-size: 34px; color: var(--white); margin-bottom: 8px; font-weight: 800; }
+    .raza-desc { font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.9; }
+    /* Mobile image — hidden on desktop, shown on mobile inside content col */
+    .raza-mobile-img { display: none; flex-direction: column; align-items: center; margin-bottom: 20px; }
+    .raza-mobile-img img { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 3px solid var(--red-primary); margin-bottom: 10px; }
+    .culture-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 50px; }
+    .culture-card { background: var(--white); border-radius: 16px; padding: 32px; box-shadow: var(--shadow-sm); border-top: 4px solid var(--red-primary); transition: var(--transition); }
+    .culture-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .culture-card h3 { font-size: 20px; margin-bottom: 12px; color: var(--black); }
+    .culture-card p { font-size: 14.5px; color: var(--gray-500); line-height: 1.8; }
+
+    /* ---- Mobile Responsive ---- */
+    @media(max-width:768px) {
+      .raza-profile { display: none; }
+      .mobile-raza-cards { display: block !important; }
+      .culture-grid { grid-template-columns: 1fr; }
+      /* Stack the timeline + village-facts 2-col grid on mobile */
+      .history-two-col { grid-template-columns: 1fr !important; gap: 40px !important; }
+      /* Hide village facts section on mobile – shown on home page instead */
+      .village-facts-col { display: none; }
+      /* Show shadab mobile card */
+      .mobile-shadab-card { display: block !important; }
+      .shadab-desktop-profile { display: none !important; }
+    }
+
+    /* ---- Mobile Profile Cards (Raza + Shadab) Shared ---- */
+    .mobile-raza-cards { display: none; }
+    .mobile-shadab-card { display: none; }
+
+    /* === Shared card wrapper === */
+    .raza-mobile-card,
+    .shadab-mobile-card {
+      border-radius: 20px;
+      padding: 0;
+      color: var(--white);
+      margin-bottom: 32px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+    }
+    .raza-mobile-card { background: linear-gradient(160deg, #180000 0%, #2d0000 55%, #1a0000 100%); border: 1px solid rgba(204,0,0,0.25); }
+    .shadab-mobile-card { background: linear-gradient(160deg, #020b16 0%, #061828 55%, #030d1a 100%); border: 1px solid rgba(30,111,173,0.25); }
+
+    /* === Top hero strip with photo === */
+    .pmc-hero {
+      position: relative;
+      padding: 32px 20px 0;
+      text-align: center;
+    }
+    .raza-mobile-card .pmc-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 80px;
+      background: rgba(204,0,0,0.12);
+    }
+    .shadab-mobile-card .pmc-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 80px;
+      background: rgba(30,111,173,0.12);
+    }
+    .pmc-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      margin: 0 auto 14px;
+      position: relative;
+      z-index: 1;
+    }
+    .raza-mobile-card .pmc-img {
+      border: 3px solid #cc0000;
+      box-shadow: 0 0 0 5px rgba(204,0,0,0.2), 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .shadab-mobile-card .pmc-img {
+      border: 3px solid #1e6fad;
+      box-shadow: 0 0 0 5px rgba(30,111,173,0.2), 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .pmc-badge {
+      background: var(--gold);
+      color: #000;
+      font-size: 9.5px;
+      font-weight: 900;
+      padding: 4px 16px;
+      border-radius: 50px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    /* === Body === */
+    .pmc-body {
+      padding: 0 20px 24px;
+      text-align: center;
+    }
+    .pmc-tag {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 14px;
+      border-radius: 50px;
+      display: inline-block;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+    .raza-mobile-card .pmc-tag {
+      background: rgba(204,0,0,0.2);
+      border: 1px solid rgba(204,0,0,0.4);
+      color: rgba(255,255,255,0.85);
+    }
+    .shadab-mobile-card .pmc-tag {
+      background: rgba(30,111,173,0.2);
+      border: 1px solid rgba(30,111,173,0.4);
+      color: rgba(255,255,255,0.85);
+    }
+    .pmc-name {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 4px;
+      font-family: var(--font-hindi-heading);
+      line-height: 1.25;
+      text-align: center;
+    }
+    .pmc-subtitle {
+      font-size: 11.5px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .raza-mobile-card .pmc-subtitle { color: var(--gold); }
+    .shadab-mobile-card .pmc-subtitle { color: #6ab4f5; }
+    /* Gold divider */
+    .pmc-divider {
+      width: 50px;
+      height: 2px;
+      margin: 12px auto 14px;
+      border-radius: 2px;
+    }
+    .raza-mobile-card .pmc-divider { background: linear-gradient(90deg, transparent, #C9A84C, transparent); }
+    .shadab-mobile-card .pmc-divider { background: linear-gradient(90deg, transparent, #1e6fad, transparent); }
+    .pmc-desc {
+      font-size: 13px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.85;
+      text-align: right;
+      margin-bottom: 18px;
+    }
+    body.lang-en .pmc-desc { text-align: left; }
+
+    /* === 4-stat grid === */
+    .pmc-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .pmc-stat {
+      border-radius: 12px;
+      padding: 12px 10px;
+      text-align: center;
+    }
+    .raza-mobile-card .pmc-stat {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(204,0,0,0.2);
+    }
+    .shadab-mobile-card .pmc-stat {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(30,111,173,0.2);
+    }
+    .pmc-stat-icon {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+    .raza-mobile-card .pmc-stat-icon { color: #C9A84C; }
+    .shadab-mobile-card .pmc-stat-icon { color: #6ab4f5; }
+    .pmc-stat-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.3;
+      margin-bottom: 1px;
+    }
+    .pmc-stat-sub {
+      font-size: 10px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.3;
+    }
+    body.lang-hi .pmc-name,
+    body.lang-hi .pmc-stat-title,
+    body.lang-hi .pmc-subtitle { font-family: var(--font-hindi-body); }
+
+    /* Shadab extra: journey timeline inside mobile card */
+    .shadab-mobile-card .smc-timeline {
+      margin-top: 20px;
+      padding: 0 4px;
+      text-align: left;
+    }
+    .shadab-mobile-card .smc-tl-item {
+      position: relative;
+      padding-left: 36px;
+      padding-bottom: 22px;
+      border-left: 2px solid rgba(30,111,173,0.35);
+      margin-left: 10px;
+    }
+    .shadab-mobile-card .smc-tl-item:last-child {
+      border-left: 2px solid transparent;
+      padding-bottom: 0;
+    }
+    .shadab-mobile-card .smc-tl-dot {
+      position: absolute;
+      left: -8px;
+      top: 2px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #1e6fad;
+      border: 2px solid #6ab4f5;
+      box-shadow: 0 0 0 3px rgba(30,111,173,0.2);
+    }
+    .shadab-mobile-card .smc-tl-year {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #6ab4f5;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .shadab-mobile-card .smc-tl-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .shadab-mobile-card .smc-tl-desc {
+      font-size: 12px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.75;
+    }
+    body.lang-en .shadab-mobile-card .smc-desc { text-align: left; }
+  </style>
+
+</head>
+<body class="lang-hi">
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="navbar-brand">
+      <img src="logo.png" alt="Gangauli Times Logo" class="navbar-logo" />
+    </a>
+    <ul class="navbar-nav">
+      <li><a href="index.html" class="nav-link"><span class="en">Home</span><span class="hi">होम</span></a></li>
+      <li><a href="gram-pradhan.html" class="nav-link"><span class="en">Gram Pradhan</span><span class="hi">ग्राम प्रधान</span></a></li>
+      <li><a href="bdc-members.html" class="nav-link"><span class="en">BDC Members</span><span class="hi">बी.डी.सी. सदस्य</span></a></li>
+      <li><a href="history.html" class="nav-link active"><span class="en">Village History</span><span class="hi">गाँव का इतिहास</span></a></li>
+      <li><a href="schools.html" class="nav-link"><span class="en">Schools</span><span class="hi">स्कूल</span></a></li>
+      <li><a href="gallery.html" class="nav-link"><span class="en">Gallery</span><span class="hi">गैलरी</span></a></li>
+      <li><a href="contact.html" class="nav-link"><span class="en">Contact</span><span class="hi">संपर्क करें</span></a></li>
+    </ul>
+        <!-- Language Toggle in Navbar -->
+    <div class="navbar-lang" id="navbar-lang">
+      <button class="nav-lang-btn" id="lang-en" title="English">EN</button>
+      <span class="nav-lang-divider">|</span>
+      <button class="nav-lang-btn active" id="lang-hi" title="हिंदी">HI</button>
+    </div>
+
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html" class="nav-link"><span class="en">Home</span><span class="hi">होम</span></a>
+    <a href="gram-pradhan.html" class="nav-link"><span class="en">Gram Pradhan</span><span class="hi">ग्राम प्रधान</span></a>
+    <a href="bdc-members.html" class="nav-link"><span class="en">BDC Members</span><span class="hi">बी.डी.सी. सदस्य</span></a>
+    <a href="history.html" class="nav-link"><span class="en">Village History</span><span class="hi">गाँव का इतिहास</span></a>
+    <a href="schools.html" class="nav-link"><span class="en">Schools</span><span class="hi">स्कूल</span></a>
+    <a href="gallery.html" class="nav-link"><span class="en">Gallery</span><span class="hi">गैलरी</span></a>
+    <a href="contact.html" class="nav-link"><span class="en">Contact</span><span class="hi">संपर्क करें</span></a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-content">
+    <div class="page-hero-breadcrumb">
+      <a href="index.html"><span class="en">Home</span><span class="hi">होम</span></a><span>/</span>
+      <span class="en">Village History</span><span class="hi">गाँव का इतिहास</span>
+    </div>
+    <h1><span class="en">Village History</span><span class="hi">गाँव का इतिहास</span></h1>
+    <p>
+      <span class="en">A journey through the ages — exploring the rich heritage and literary legacy of Gangauli.</span>
+      <span class="hi">युगों की यात्रा — गंगौली की समृद्ध विरासत और साहित्यिक धरोहर की खोज।</span>
+    </p>
+  </div>
+</section>
+<!-- MAIN CONTENT -->
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+
+    <!-- Dr. Rahi Masoom Raza Feature — DESKTOP -->
+    <div class="raza-profile reveal">
+      <div class="raza-img-col">
+        <img src="raza.jpg" alt="Dr. Rahi Masoom Raza" class="raza-img" loading="lazy" />
+        <div style="margin-top:16px;">
+          <span style="background:var(--gold);color:var(--black);font-size:11px;font-weight:800;padding:5px 16px;border-radius:50px;letter-spacing:1px;text-transform:uppercase;">
+            <span class="en">Literary Icon</span><span class="hi">साहित्यिक प्रतीक</span>
+          </span>
+        </div>
+      </div>
+      <div>
+        <span class="section-label" style="background:rgba(204,0,0,0.2);border-color:rgba(204,0,0,0.4);">
+          <span class="en">Born in Gangauli</span><span class="hi">गंगौली में जन्मे</span>
+        </span>
+        <h2 class="raza-name">
+          <span class="en">Dr. Rahi Masoom Raza</span>
+          <span class="hi">डॉ. राही मासूम रज़ा</span>
+        </h2>
+        <p style="color:var(--gold);font-size:13px;font-weight:600;letter-spacing:1px;margin-bottom:16px;">
+          <span class="en">1927 – 1992 | Poet, Novelist, Screenwriter</span>
+          <span class="hi">1927 – 1992 | कवि, उपन्यासकार, पटकथा लेखक</span>
+        </p>
+        <p class="raza-desc">
+          <span class="en">Dr. Rahi Masoom Raza was born in Gangauli, Ghazipur on September 1, 1927. One of the most celebrated Urdu and Hindi writers of the 20th century, he is best known for his landmark novel <em>'Aadha Gaon'</em> (Half Village), which immortalized Gangauli in Indian literature. He also wrote the screenplay for the iconic TV series <em>Mahabharat</em> (1988).</span>
+          <span class="hi">डॉ. राही मासूम रज़ा का जन्म 1 सितंबर 1927 को गंगौली, गाजीपुर में हुआ था। 20वीं सदी के सबसे प्रसिद्ध उर्दू और हिंदी लेखकों में से एक, वे अपने ऐतिहासिक उपन्यास <em>'आधा गाँव'</em> के लिए जाने जाते हैं। उन्होंने प्रतिष्ठित टीवी धारावाहिक <em>महाभारत</em> (1988) की पटकथा भी लिखी।</span>
+        </p>
+      </div>
+    </div><!-- end raza-profile (desktop) -->
+
+    <!-- Dr. Rahi Masoom Raza — MOBILE CARD -->
+    <div class="mobile-raza-cards reveal">
+      <div class="raza-mobile-card">
+        <!-- Hero photo strip -->
+        <div class="pmc-hero">
+          <img src="raza.jpg" alt="डॉ. राही मासूम रज़ा" class="pmc-img" loading="lazy" />
+          <span class="pmc-badge"><span class="en">Literary Icon</span><span class="hi">साहित्यिक प्रतीक</span></span>
+        </div>
+        <!-- Body -->
+        <div class="pmc-body">
+          <span class="pmc-tag"><span class="en">Born in Gangauli</span><span class="hi">गंगौली में जन्मे</span></span>
+          <h2 class="pmc-name"><span class="en">Dr. Rahi Masoom Raza</span><span class="hi">डॉ. राही मासूम रज़ा</span></h2>
+          <p class="pmc-subtitle">
+            <span class="en">1927 &ndash; 1992 &bull; Poet &bull; Novelist &bull; Screenwriter</span>
+            <span class="hi">1927 &ndash; 1992 &bull; कवि &bull; उपन्यासकार &bull; पटकथा लेखक</span>
+          </p>
+          <div class="pmc-divider"></div>
+          <p class="pmc-desc">
+            <span class="en">Born in Gangauli, Ghazipur on 1 September 1927. Celebrated for his landmark novel <em>'Aadha Gaon'</em> and for writing the screenplay of the iconic TV series <em>Mahabharat</em> (1988).</span>
+            <span class="hi">गंगौली, गाजीपुर में जन्मे डॉ. रज़ा अपने उपन्यास <em>'आधा गाँव'</em> और महाभारत (1988) की पटकथा के लिए जाने जाते हैं।</span>
+          </p>
+          <div class="pmc-stats">
+            <div class="pmc-stat">
+              <div class="pmc-stat-icon"><i class="fa-solid fa-book-open"></i></div>
+              <div class="pmc-stat-title"><span class="en">Aadha Gaon</span><span class="hi">आधा गाँव</span></div>
+              <div class="pmc-stat-sub"><span class="en">Novel</span><span class="hi">उपन्यास</span></div>
+            </div>
+            <div class="pmc-stat">
+              <div class="pmc-stat-icon"><i class="fa-solid fa-film"></i></div>
+              <div class="pmc-stat-title"><span class="en">Mahabharat</span><span class="hi">महाभारत</span></div>
+              <div class="pmc-stat-sub"><span class="en">Screenplay</span><span class="hi">पटकथा</span></div>
+            </div>
+            <div class="pmc-stat">
+              <div class="pmc-stat-icon"><i class="fa-solid fa-feather-pointed"></i></div>
+              <div class="pmc-stat-title"><span class="en">Urdu &amp; Hindi</span><span class="hi">उर्दू और हिंदी</span></div>
+              <div class="pmc-stat-sub"><span class="en">Literature</span><span class="hi">साहित्य</span></div>
+            </div>
+            <div class="pmc-stat">
+              <div class="pmc-stat-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="pmc-stat-title"><span class="en">Gangauli</span><span class="hi">गंगौली</span></div>
+              <div class="pmc-stat-sub"><span class="en">Birthplace</span><span class="hi">जन्मस्थान</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- end mobile-raza-cards -->
+
+    <!-- =====================================================
+         DR. RAHI MASOOM RAZA — POORI JIWANI (BIOGRAPHY)
+         Desktop + Mobile Responsive
+    ====================================================== -->
+    <div class="raza-jiwani-section reveal" id="raza-jiwani">
+
+      <!-- Section Header -->
+      <div class="rjw-header">
+        <span class="rjw-header-label">
+          <span class="en">Full Biography</span>
+          <span class="hi">सम्पूर्ण जीवनी</span>
+        </span>
+        <h2>
+          <span class="en">Dr. Rahi Masoom Raza — A Literary Legend of Gangauli</span>
+          <span class="hi">डॉ. राही मासूम रज़ा — गंगौली के साहित्यिक महानायक</span>
+        </h2>
+        <p class="rjw-header-sub">
+          <span class="en">1 September 1927 &bull; Gangauli, Ghazipur &nbsp;|&nbsp; 15 March 1992 &bull; Mumbai</span>
+          <span class="hi">1 सितंबर 1927 &bull; गंगौली, गाजीपुर &nbsp;|&nbsp; 15 मार्च 1992 &bull; मुंबई</span>
+        </p>
+      </div>
+
+      <div class="rjw-body">
+
+        <!-- 1. BACHPAN / EARLY LIFE -->
+        <div class="rjw-point-section">
+          <div class="rjw-ps-header">
+            <div class="rjw-ps-icon red"><i class="fa-solid fa-house-chimney"></i></div>
+            <h3 class="rjw-ps-title">
+              <span class="en">1. Early Life &amp; Childhood</span>
+              <span class="hi">१. जन्म और बचपन</span>
+            </h3>
+          </div>
+          <ul class="rjw-list">
+            <li><span class="rjw-bullet"></span>
+              <span>
+                <span class="en">Dr. Rahi Masoom Raza was born on <strong>1 September 1927</strong> in the village of <strong>Gangauli</strong>, Ghazipur district, Uttar Pradesh — a small yet culturally rich village on the banks of the Ganga.</span>
+                <span class="hi">डॉ. राही मासूम रज़ा का जन्म <strong>1 सितंबर 1927</strong> को <strong>गंगौली</strong> गाँव, जिला गाजीपुर, उत्तर प्रदेश में हुआ था — गंगा के किनारे बसा एक छोटा-सा किंतु सांस्कृतिक रूप से समृद्ध गाँव।</span>
+              </span>
+            </li>
+            <li><span class="rjw-bullet"></span>
+              <span>
+                <span class="en">His full name was <strong>Rahi Masoom Raza</strong>. He belonged to a <strong>Shia Muslim family</strong> of Gangauli, deeply rooted in the composite Ganga-Jamuni tehzeeb of eastern UP.</span>
+                <span class="hi">उनका पूरा नाम <strong>राही मासूम रज़ा</strong> था। वे गंगौली के एक <strong>शिया मुस्लिम परिवार</strong> से थे, जो पूर्वी उत्तर प्रदेश की गंगा-जमुनी तहज़ीब में गहरे रचे-बसे थे।</span>
+              </span>
+            </li>
+            <li><span class="rjw-bullet"></span>
+              <span>
+                <span class="en">His childhood in Gangauli was spent amidst the vibrant rural life of a multi-religious village — Hindu-Muslim unity, seasonal festivals, and the flowing Ganga shaped his worldview profoundly. These experiences later became the soul of his writing.</span>
+                <span class="hi">गंगौली में उनका बचपन एक बहु-धार्मिक गाँव के जीवंत ग्रामीण जीवन के बीच बीता — हिंदू-मुस्लिम एकता, मौसमी त्योहार और गंगा की लहरों ने उनके जीवन-दर्शन को गहराई से प्रभावित किया। ये अनुभव बाद में उनके लेखन की आत्मा बने।</span>
+              </span>
+            </li>
+            <li><span class="rjw-bullet"></span>
+              <span>
+                <span class="en">From childhood, he showed a keen interest in language, poetry, and storytelling. He was deeply influenced by the Urdu literary tradition and the oral culture of the village — qissas, marsiye, and folk songs.</span>
+                <span class="hi">बचपन से ही उनकी भाषा, कविता और कहानी में गहरी रुचि थी। वे उर्दू साहित्यिक परंपरा और गाँव की मौखिक संस्कृति — क़िस्से, मर्सिये और लोकगीतों से गहराई से प्रभावित थे।</span>
+              </span>
+            </li>
+            <li><span class="rjw-bullet"></span>
+              <span>
+                <span class="en">Gangauli remained the emotional core of his life even after he left for higher studies and later settled in Mumbai. He called it <em>"the village of his soul"</em> — अपने प्राणों का गाँव।</span>
+                <span class="hi">उच्च शिक्षा के लिए जाने और बाद में मुंबई में बस जाने के बाद भी गंगौली उनके जीवन का भावनात्मक केंद्र बना रहा। वे इसे <em>"अपने प्राणों का गाँव"</em> कहते थे।</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="rjw-divider"></div>
+
+        <!-- 2. SHIKSHA / EDUCATION -->
+        <div class="rjw-point-section">
+          <div class="rjw-ps-header">
+            <div class="rjw-ps-icon gold"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3 class="rjw-ps-title">
+              <span class="en">2. Education</span>
+              <span class="hi">२. शिक्षा</span>
+            </h3>
+          </div>
+          <ul class="rjw-list">
+            <li><span class="rjw-bullet gold"></span>
+              <span>
+                <span class="en">Raza completed his early schooling in Ghazipur. He was a brilliant student with a passion for Urdu and Persian languages from an early age.</span>
+                <span class="hi">रज़ा ने अपनी प्रारंभिक शिक्षा गाजीपुर में पूरी की। वे बचपन से ही उर्दू और फ़ारसी भाषाओं के प्रति गहरी रुचि रखने वाले प्रतिभाशाली छात्र थे।</span>
+              </span>
+            </li>
+            <li><span class="rjw-bullet gold"></span>
+              <span>
+                <span class="en">He pursued higher education at <strong>Aligarh Muslim University (AMU)</strong>, Aligarh — one of India's premier institutions of learning. AMU was a hotbed of Urdu literature, progressive thought, and national consciousness.</span>
+                <span class="hi">उन्होंने <strong>अलीगढ़ मुस्लिम विश्वविद्यालय (AMU)</strong>, अलीगढ़ से उच्च शिक्षा ग्रहण की — जो भारत के प्रमुख शिक्षा संस्थानों में से एक है। AMU उर्दू साहित्य, प्रगतिशील विचार और राष्ट्रीय चेतना का केंद्र था।</span>
+              </span>
+            </li>
+            <li><span class="rjw-bullet gold"></span>
+              <span>
+                <span class="en">He obtained his <strong>M.A.</strong> in Urdu Literature from AMU. The university environment exposed him to the progressive writers' movement (Taraqqi Pasand Tehreek), which greatly shaped his literary outlook.</span>
+                <span class="hi">उन्होंने AMU से उर्दू साहित्य में <strong>एम.ए.</strong> किया। विश्वविद्यालय के माहौल ने उन्हें प्रगतिशील लेखक आंदोलन (तरक़्क़ी पसंद तहरीक) से परिचित कराया, जिसने उनके साहित्यिक दृष्टिकोण को बहुत प्रभावित किया।</span>
+              </span>
+            </li>
+            <li><span class="rjw-bullet gold"></span>
+              <span>
+                <span class="en">He later earned his <strong>Ph.D.</strong> (Doctorate) in Urdu from <strong>Aligarh Muslim University</strong>, which earned him the prefix <em>"Dr."</em> before his name. His doctoral work focused on the rich tradition of Urdu poetry and culture.</span>
+                <span class="hi">बाद में उन्होंने <strong>अलीगढ़ मुस्लिम विश्वविद्यालय</strong> से उर्दू में <strong>पीएच.डी.</strong> (डॉक्टरेट) की उपाधि प्राप्त की, जिससे उनके नाम के आगे <em>"डॉ."</em> का संबोधन जुड़ा। उनके शोध का विषय उर्दू कविता और संस्कृति की समृद्ध परंपरा थी।</span>
+              </span>
+            </li>
+            <li><span class="rjw-bullet gold"></span>
+              <span>
+                <span class="en">After completing his doctorate, Dr. Raza joined <strong>Aligarh Muslim University as a Professor</strong> in the Department of Urdu. He taught there for several years, mentoring a generation of Urdu writers and scholars.</span>
+                <span class="hi">डॉक्टरेट पूर्ण करने के बाद डॉ. रज़ा <strong>अलीगढ़ मुस्लिम विश्वविद्यालय में उर्दू विभाग में प्रोफ़ेसर</strong> के रूप में नियुक्त हुए। उन्होंने वहाँ कई वर्षों तक पढ़ाया और उर्दू लेखकों व विद्वानों की एक पीढ़ी को तराशा।</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="rjw-divider"></div>
+
+        <!-- 3. BOOKS -->
+        <div class="rjw-point-section">
+          <div class="rjw-ps-header">
+            <div class="rjw-ps-icon red"><i class="fa-solid fa-book-open"></i></div>
+            <h3 class="rjw-ps-title">
+              <span class="en">3. Literary Works — Books &amp; Novels</span>
+              <span class="hi">३. साहित्यिक कृतियाँ — किताबें और उपन्यास</span>
+            </h3>
+          </div>
+
+          <!-- Intro para -->
+          <p style="font-size:14.5px;color:var(--gray-500);line-height:1.9;margin-bottom:22px;">
+            <span class="en">Dr. Raza was a prolific writer who authored novels, poetry collections, plays, and film/TV scripts. He wrote primarily in Urdu and Hindi, and his works reflect the pain of partition, the complexity of Hindu-Muslim relations, nostalgia for the village life, and the dignity of ordinary people.</span>
+            <span class="hi">डॉ. रज़ा एक विपुल लेखक थे जिन्होंने उपन्यास, काव्य-संग्रह, नाटक और फ़िल्म/टीवी स्क्रिप्ट लिखीं। उन्होंने मुख्यतः उर्दू और हिंदी में लिखा, और उनकी रचनाएँ बँटवारे का दर्द, हिंदू-मुस्लिम संबंधों की जटिलता, गाँव के जीवन की याद और आम इंसान की गरिमा को दर्शाती हैं।</span>
+          </p>
+
+          <div class="rjw-books-grid">
+
+            <!-- Aadha Gaon -->
+            <div class="rjw-book-card featured">
+              <div class="rjw-book-year">1966 &nbsp;<span style="color:var(--gold);">★ Magnum Opus</span></div>
+              <div class="rjw-book-title">
+                <span class="en">Aadha Gaon (आधा गाँव)</span>
+                <span class="hi">आधा गाँव</span>
+              </div>
+              <div class="rjw-book-desc">
+                <span class="en">His masterpiece novel. Written in Urdu, it chronicles the life of a Shia Muslim community in Gangauli across three generations — from pre-independence to post-partition India. The novel captures love, loss, politics, and the tragedy of partition with raw honesty. It immortalized Gangauli in Indian literature.</span>
+                <span class="hi">उनका महान उपन्यास। उर्दू में लिखित, यह तीन पीढ़ियों में गंगौली के शिया मुस्लिम समुदाय के जीवन को — स्वतंत्रता पूर्व से विभाजन के बाद तक — चित्रित करता है। उपन्यास प्रेम, हानि, राजनीति और विभाजन की त्रासदी को कच्ची ईमानदारी से पकड़ता है। इसने गंगौली को भारतीय साहित्य में अमर कर दिया।</span>
+              </div>
+            </div>
+
+            <!-- Topi Shukla -->
+            <div class="rjw-book-card">
+              <div class="rjw-book-year">1968</div>
+              <div class="rjw-book-title">
+                <span class="en">Topi Shukla (टोपी शुक्ला)</span>
+                <span class="hi">टोपी शुक्ला</span>
+              </div>
+              <div class="rjw-book-desc">
+                <span class="en">A moving Hindi novel about the deep friendship between a Hindu Brahmin boy (Baldev Prasad Shukla, called "Topi") and a Muslim boy (Iffan). It explores class, religion, and social hypocrisy in post-partition India with gentle yet powerful satire.</span>
+                <span class="hi">एक मर्मस्पर्शी हिंदी उपन्यास जो एक हिंदू ब्राह्मण लड़के ("टोपी" — बलदेव प्रसाद शुक्ला) और एक मुस्लिम लड़के (इफ़्फ़न) की गहरी मित्रता के बारे में है। यह विभाजन के बाद के भारत में जाति, धर्म और सामाजिक पाखंड को कोमल किंतु शक्तिशाली व्यंग्य के साथ उजागर करता है।</span>
+              </div>
+            </div>
+
+            <!-- Himmat Jaunpuri -->
+            <div class="rjw-book-card">
+              <div class="rjw-book-year">1969</div>
+              <div class="rjw-book-title">
+                <span class="en">Himmat Jaunpuri (हिम्मत जौनपुरी)</span>
+                <span class="hi">हिम्मत जौनपुरी</span>
+              </div>
+              <div class="rjw-book-desc">
+                <span class="en">A deeply personal novel based on a childhood friend of Raza. It follows the tragic story of Himmat Jaunpuri — a common man who dreams of making it in Bombay's glamorous film world but is broken by social hollowness, poverty, and life's cruel ironies. A satirical and poignant portrait of the city that never fulfils its promises.</span>
+                <span class="hi">रज़ा के एक बचपन के दोस्त पर आधारित अत्यंत व्यक्तिगत उपन्यास। यह हिम्मत जौनपुरी की दुखद कहानी है — एक आम आदमी जो बंबई की फ़िल्मी दुनिया में सपने बुनता है, लेकिन सामाजिक खोखलेपन, ग़रीबी और जीवन की विडंबनाओं में टूट जाता है। एक मार्मिक व्यंग्यात्मक चित्रण।</span>
+              </div>
+            </div>
+
+            <!-- Oos Ki Bund -->
+            <div class="rjw-book-card">
+              <div class="rjw-book-year">1970</div>
+              <div class="rjw-book-title">
+                <span class="en">Oos Ki Bund (ओस की बूँद)</span>
+                <span class="hi">ओस की बूँद</span>
+              </div>
+              <div class="rjw-book-desc">
+                <span class="en">A powerful novel set against the backdrop of post-partition communal riots. It explores human emotions, compassion, and the search for humanity and dignity amidst violence and religious hatred. Written with raw sensitivity, it reflects Raza's deep concern for communal harmony.</span>
+                <span class="hi">विभाजन के बाद के सांप्रदायिक दंगों की पृष्ठभूमि पर लिखा एक शक्तिशाली उपन्यास। यह हिंसा और धार्मिक नफ़रत के बीच मानवीय भावनाओं, करुणा और इंसानियत की तलाश को उजागर करता है। सांप्रदायिक सद्भाव के प्रति रज़ा की गहरी चिंता इसमें झलकती है।</span>
+              </div>
+            </div>
+
+            <!-- Chhote Aadmi Ki Badi Kahani -->
+            <div class="rjw-book-card">
+              <div class="rjw-book-year">1966</div>
+              <div class="rjw-book-title">
+                <span class="en">Chhote Aadmi Ki Badi Kahani</span>
+                <span class="hi">छोटे आदमी की बड़ी कहानी</span>
+              </div>
+              <div class="rjw-book-desc">
+                <span class="en">A biographical account of <strong>Havildar Abdul Hamid</strong>, who was posthumously awarded the <strong>Param Vir Chakra</strong> for his heroism in the 1965 Indo-Pak War. Commissioned by Defence Minister Y.B. Chavan, Raza used this to honour the war hero — also from Ghazipur — and address themes of patriotism and national unity.</span>
+                <span class="hi"><strong>हवलदार अब्दुल हमीद</strong> की जीवनी, जिन्हें 1965 के भारत-पाक युद्ध में वीरता के लिए मरणोपरांत <strong>परमवीर चक्र</strong> मिला। रक्षा मंत्री वाई.बी. चव्हाण के आग्रह पर लिखी यह पुस्तक गाजीपुर के इस शहीद को श्रद्धांजलि और राष्ट्रीय एकता का संदेश है।</span>
+              </div>
+            </div>
+
+            <!-- Neem Ka Ped -->
+            <div class="rjw-book-card">
+              <div class="rjw-book-year">1985</div>
+              <div class="rjw-book-title">
+                <span class="en">Neem Ka Ped (नीम का पेड़)</span>
+                <span class="hi">नीम का पेड़</span>
+              </div>
+              <div class="rjw-book-desc">
+                <span class="en">Written originally as a TV serial script, it later became celebrated as a literary work. A deeply emotional story about an old neem tree, a family, their memories, and the relentless march of time — a metaphor for roots and belonging.</span>
+                <span class="hi">मूल रूप से टीवी धारावाहिक की स्क्रिप्ट के रूप में लिखा गया, बाद में साहित्यिक कृति के रूप में प्रसिद्ध हुआ। एक पुराने नीम के पेड़, एक परिवार, उनकी यादों और समय के बेरहम क़दमों के बारे में एक गहरी भावनात्मक कहानी — जड़ों और अपनेपन का एक रूपक।</span>
+              </div>
+            </div>
+
+          </div><!-- end books grid -->
+
+          <!-- Extra notable works list -->
+          <div style="margin-top:24px;">
+            <p style="font-size:13px;font-weight:700;color:var(--gray-500);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;">
+              <span class="en">Other Notable Works</span>
+              <span class="hi">अन्य उल्लेखनीय रचनाएँ</span>
+            </p>
+            <ul class="rjw-list">
+              <li><span class="rjw-bullet"></span>
+                <span>
+                  <span class="en"><strong>Scene: 75 (सीन: 75)</strong> — A gripping dramatic novel set in the world of Bollywood, based on Raza's own experiences as a screenwriter. It offers a sharp, insider's look at the glittering yet morally hollow film industry — its politics, betrayals, and the slow decay of artistic integrity.</span>
+                  <span class="hi"><strong>सीन: 75</strong> — बॉलीवुड की दुनिया पर आधारित एक रोचक नाटकीय उपन्यास, जो राही मासूम रज़ा के स्वयं के पटकथा लेखक अनुभवों पर आधारित है। यह फ़िल्मी दुनिया की चमक-दमक के पीछे छुपी नैतिक खोखलेपन, राजनीति, धोखे और कलात्मक ईमानदारी के क्षरण को उजागर करता है।</span>
+                </span>
+              </li>
+              <li><span class="rjw-bullet"></span>
+                <span>
+                  <span class="en"><strong>Katra Bi Aarzu (कटरा बी आर्ज़ू)</strong> — A deeply moving novel set in old Lucknow's Muslim neighbourhood, the story follows the lives of ordinary people trapped in the ruins of a dying tehzeeb — their love, longing, helplessness, and the quiet tragedy of a culture fading away after Partition.</span>
+                  <span class="hi"><strong>कटरा बी आर्ज़ू</strong> — लखनऊ के पुराने मुस्लिम मोहल्ले पर आधारित एक गहरी मर्मस्पर्शी कहानी, जो एक बिखरती तहज़ीब के खंडहरों में जी रहे आम लोगों के प्रेम, तड़प, बेबसी और विभाजन के बाद एक संस्कृति के मौन अंत की व्यथा को चित्रित करती है।</span>
+                </span>
+              </li>
+              <li><span class="rjw-bullet"></span>
+                <span>
+                  <span class="en"><strong>Asantosh Ke Din (असन्तोष के दिन)</strong> — A poignant collection of essays and reflections capturing Raza's disillusionment with post-independence India. Written during a turbulent period, it voices the anguish of a patriot watching his nation torn apart by communalism, corruption, and broken promises — a searing confession of a sensitive writer's restless soul.</span>
+                  <span class="hi"><strong>असन्तोष के दिन</strong> — रज़ा के निबंधों और विचारों का एक मार्मिक संग्रह जो स्वतंत्रता के बाद के भारत से उनके मोहभंग को व्यक्त करता है। एक उथल-पुथल भरे दौर में लिखा गया, यह एक देशभक्त की पीड़ा को आवाज़ देता है जो अपने देश को सांप्रदायिकता, भ्रष्टाचार और टूटे हुए वादों में बिखरते देख रहा है — एक संवेदनशील लेखक की बेचैन आत्मा का दर्दनाक इकरार।</span>
+                </span>
+              </li>
+              <li><span class="rjw-bullet"></span>
+                <span>
+                  <span class="en">He also wrote numerous <strong>film songs and dialogues</strong> for Bollywood, including movies like <em>Mili, Lahu Ke Do Rang, Muqabla, Laila Majnu</em> and many more — making literature accessible through mainstream cinema.</span>
+                  <span class="hi">उन्होंने बॉलीवुड के लिए <em>मिली, लहू के दो रंग, मुकाबला, लैला मजनू</em> सहित अनेक फ़िल्मों के <strong>गीत और संवाद</strong> भी लिखे — साहित्य को मुख्यधारा के सिनेमा के माध्यम से आम जन तक पहुँचाया।</span>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rjw-divider"></div>
+
+        <!-- 4. MAHABHARAT -->
+        <div class="rjw-point-section">
+          <div class="rjw-ps-header">
+            <div class="rjw-ps-icon" style="background:linear-gradient(135deg,#f0a000,#c07000);"><i class="fa-solid fa-om"></i></div>
+            <h3 class="rjw-ps-title">
+              <span class="en">4. Mahabharat — "Main Samay Hoon" (मैं समय हूँ)</span>
+              <span class="hi">४. महाभारत — "मैं समय हूँ"</span>
+            </h3>
+          </div>
+
+          <div class="rjw-mb-card">
+            <div class="rjw-mb-icon-wrap">
+              <i class="fa-solid fa-om" style="color:#fff3cd;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.4));"></i>
+            </div>
+            <div>
+              <h4 class="rjw-mb-title">
+                <span class="en">B.R. Chopra's Mahabharat (1988–90) — The Most Watched TV Series in Indian History</span>
+                <span class="hi">बी.आर. चोपड़ा की महाभारत (1988–90) — भारतीय इतिहास की सर्वाधिक देखी गई टीवी धारावाहिक</span>
+              </h4>
+              <ul class="rjw-mb-list">
+                <li><span class="rjw-mb-bullet"></span>
+                  <span>
+                    <span class="en">Dr. Rahi Masoom Raza was chosen by legendary filmmaker <strong>B.R. Chopra</strong> to write the screenplay and dialogue for the iconic television series <em>Mahabharat</em>, which aired on Doordarshan from <strong>1988 to 1990</strong>.</span>
+                    <span class="hi">महान फ़िल्मकार <strong>बी.आर. चोपड़ा</strong> ने डॉ. राही मासूम रज़ा को दूरदर्शन पर <strong>1988 से 1990</strong> तक प्रसारित प्रतिष्ठित धारावाहिक <em>महाभारत</em> की पटकथा और संवाद लिखने के लिए चुना।</span>
+                  </span>
+                </li>
+                <li><span class="rjw-mb-bullet"></span>
+                  <span>
+                    <span class="en">The opening narration of Mahabharat — <strong>"Main Samay Hoon"</strong> ("I am Time") — spoken at the beginning of each episode, was written by Dr. Raza. These words became one of the most iconic lines in Indian television history and gave the series its universal, timeless character.</span>
+                    <span class="hi">महाभारत की प्रारंभिक उद्घोषणा — <strong>"मैं समय हूँ"</strong> — जो हर एपिसोड में बोली जाती थी, डॉ. रज़ा की लेखनी से जन्मी थी। ये शब्द भारतीय टेलीविजन इतिहास की सबसे प्रतिष्ठित पंक्तियों में से एक बन गए और धारावाहिक को एक सार्वभौमिक, कालातीत चरित्र प्रदान किया।</span>
+                  </span>
+                </li>
+                <li><span class="rjw-mb-bullet"></span>
+                  <span>
+                    <span class="en">At its peak, <em>Mahabharat</em> had a viewership of over <strong>65 crore (650 million) Indians</strong>. During its telecast, streets would empty across the country — a cultural phenomenon unmatched in Indian television history.</span>
+                    <span class="hi">अपने चरम पर, <em>महाभारत</em> के दर्शकों की संख्या <strong>65 करोड़ (650 मिलियन) भारतीयों</strong> से अधिक थी। इसके प्रसारण के दौरान देशभर की सड़कें सुनसान हो जाती थीं — भारतीय टेलीविजन इतिहास में अतुलनीय एक सांस्कृतिक घटना।</span>
+                  </span>
+                </li>
+                <li><span class="rjw-mb-bullet"></span>
+                  <span>
+                    <span class="en">A <strong>Muslim writer from a small village in Ghazipur</strong> penning the dialogues of India's greatest Hindu epic was itself a profound statement of India's composite culture — a fact that Dr. Raza himself was deeply proud of.</span>
+                    <span class="hi"><strong>गाजीपुर के एक छोटे गाँव का एक मुस्लिम लेखक</strong> भारत के सबसे महान हिंदू महाकाव्य के संवाद लिखे — यह स्वयं भारत की मिली-जुली संस्कृति का एक गहरा बयान था — एक तथ्य जिस पर डॉ. रज़ा स्वयं गहरे गर्व का अनुभव करते थे।</span>
+                  </span>
+                </li>
+                <li><span class="rjw-mb-bullet"></span>
+                  <span>
+                    <span class="en">He also wrote the dialogue for B.R. Chopra's <em>Mahabharat</em> sequel projects and several other TV productions, cementing his place as one of the most versatile literary minds of independent India.</span>
+                    <span class="hi">उन्होंने बी.आर. चोपड़ा की <em>महाभारत</em> की अनुवर्ती परियोजनाओं और कई अन्य टीवी प्रोडक्शन के संवाद भी लिखे, जिसने उन्हें स्वतंत्र भारत के सबसे बहुमुखी साहित्यिक प्रतिभाओं में से एक के रूप में स्थापित किया।</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Quote -->
+          <div class="rjw-quote" style="margin-top:20px;">
+            <p class="rjw-quote-text">
+              <span class="en">"मैं समय हूँ... समय के साथ जो बीत गया वो इतिहास है, और जो आने वाला है वो भविष्य है, लेकिन जो चल रहा है वो... महाभारत है।" — <strong>Dr. Rahi Masoom Raza (Mahabharat, 1988)</strong></span>
+              <span class="hi">"मैं समय हूँ... समय के साथ जो बीत गया वो इतिहास है, और जो आने वाला है वो भविष्य है, लेकिन जो चल रहा है वो... महाभारत है।" — <strong>डॉ. राही मासूम रज़ा (महाभारत, 1988)</strong></span>
+            </p>
+          </div>
+        </div>
+
+        <div class="rjw-divider"></div>
+
+        <!-- 5. KHAS BATEN / SPECIAL ACHIEVEMENTS -->
+        <div class="rjw-point-section">
+          <div class="rjw-ps-header">
+            <div class="rjw-ps-icon dark"><i class="fa-solid fa-star"></i></div>
+            <h3 class="rjw-ps-title">
+              <span class="en">5. Special Highlights &amp; Achievements</span>
+              <span class="hi">५. विशेष उपलब्धियाँ और खास बातें</span>
+            </h3>
+          </div>
+          <ul class="rjw-list">
+            <li><span class="rjw-bullet"></span>
+              <span>
+                <span class="en"><strong>Bilingual Genius:</strong> Dr. Raza was equally fluent and creative in both <strong>Urdu and Hindi</strong> — a rare achievement. He bridged the two literary traditions at a time when they were being artificially separated along religious lines after independence.</span>
+                <span class="hi"><strong>द्विभाषी प्रतिभा:</strong> डॉ. रज़ा <strong>उर्दू और हिंदी</strong> दोनों में समान रूप से प्रवाहमान और रचनात्मक थे — एक दुर्लभ उपलब्धि। उन्होंने स्वतंत्रता के बाद दोनों साहित्यिक परंपराओं को उस समय जोड़ा जब उन्हें धार्मिक आधार पर कृत्रिम रूप से अलग किया जा रहा था।</span>
+              </span>
+            </li>
+            <li><span class="rjw-bullet"></span>
+              <span>
+                <span class="en"><strong>Secular Humanist:</strong> Despite being a Shia Muslim, he wrote the screenplay of the Mahabharat with such depth and reverence that it became the definitive television adaptation of the Hindu epic. He always maintained that great literature transcends religion.</span>
+                <span class="hi"><strong>धर्मनिरपेक्ष मानवतावादी:</strong> शिया मुस्लिम होने के बावजूद, उन्होंने महाभारत की पटकथा इतनी गहराई और श्रद्धा के साथ लिखी कि यह हिंदू महाकाव्य का निर्णायक टेलीविजन रूपांतरण बन गई। उन्होंने हमेशा माना कि महान साहित्य धर्म से परे होता है।</span>
+              </span>
+            </li>
+            <li><span class="rjw-bullet"></span>
+              <span>
+                <span class="en"><strong>Aadha Gaon's Impact:</strong> His novel 'Aadha Gaon' is considered one of the <strong>greatest novels in Urdu literature</strong>. It was among the first works to document the partition trauma from the perspective of common village people — not politicians or leaders.</span>
+                <span class="hi"><strong>आधा गाँव का प्रभाव:</strong> उनका उपन्यास 'आधा गाँव' <strong>उर्दू साहित्य के सर्वश्रेष्ठ उपन्यासों</strong> में से एक माना जाता है। यह आम गाँव के लोगों — न कि राजनेताओं या नेताओं — के दृष्टिकोण से विभाजन की त्रासदी को दर्ज करने वाली पहली रचनाओं में से एक थी।</span>
+              </span>
+            </li>
+            <li><span class="rjw-bullet"></span>
+              <span>
+                <span class="en"><strong>Progressive Movement:</strong> He was an active member of the <strong>All India Progressive Writers' Association</strong> (AIPWA), which aimed to use literature as a tool for social change, equality, and justice.</span>
+                <span class="hi"><strong>प्रगतिशील आंदोलन:</strong> वे <strong>अखिल भारतीय प्रगतिशील लेखक संघ</strong> (AIPWA) के सक्रिय सदस्य थे, जिसका उद्देश्य साहित्य को सामाजिक परिवर्तन, समानता और न्याय के लिए एक साधन के रूप में उपयोग करना था।</span>
+              </span>
+            </li>
+            <li><span class="rjw-bullet"></span>
+              <span>
+                <span class="en"><strong>Mumbai Journey:</strong> In the 1970s, Dr. Raza moved to <strong>Mumbai</strong> to pursue his career as a screenwriter and lyricist in Bollywood. He wrote dialogues, film songs, and scripts for numerous Hindi films, bringing his literary sensibility to popular cinema.</span>
+                <span class="hi"><strong>मुंबई की यात्रा:</strong> 1970 के दशक में डॉ. रज़ा <strong>मुंबई</strong> चले गए और बॉलीवुड में पटकथा लेखक और गीतकार के रूप में अपना करियर आगे बढ़ाया। उन्होंने अनेक हिंदी फ़िल्मों के संवाद, गाने और स्क्रिप्ट लिखे, अपनी साहित्यिक संवेदनशीलता को लोकप्रिय सिनेमा में लाए।</span>
+              </span>
+            </li>
+            <li><span class="rjw-bullet"></span>
+              <span>
+                <span class="en"><strong>Gangauli — Forever in His Heart:</strong> No matter how far he traveled, Gangauli remained his spiritual home. He wrote about it, spoke about it, and wept for it. The village breathes in every page of 'Aadha Gaon' and in the spirit of everything he created.</span>
+                <span class="hi"><strong>गंगौली — हमेशा उनके दिल में:</strong> वे चाहे जितनी दूर चले गए, गंगौली उनका आध्यात्मिक घर बना रहा। उन्होंने इसके बारे में लिखा, बात की और रोए। यह गाँव 'आधा गाँव' के हर पृष्ठ में और उनकी बनाई हर चीज़ की आत्मा में साँस लेता है।</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="rjw-divider"></div>
+
+        <!-- 6. NIRVAN / DEATH & LEGACY -->
+        <div class="rjw-point-section">
+          <div class="rjw-ps-header">
+            <div class="rjw-ps-icon" style="background:linear-gradient(135deg,#555,#333);"><i class="fa-solid fa-dove"></i></div>
+            <h3 class="rjw-ps-title">
+              <span class="en">6. Death &amp; Eternal Legacy</span>
+              <span class="hi">६. निधन और अमर विरासत</span>
+            </h3>
+          </div>
+          <ul class="rjw-list">
+            <li><span class="rjw-bullet"></span>
+              <span>
+                <span class="en">Dr. Rahi Masoom Raza passed away on <strong>15 March 1992</strong> in <strong>Mumbai</strong>, aged 64, after a brief illness. He left behind a literary legacy that continues to inspire millions across the globe.</span>
+                <span class="hi">डॉ. राही मासूम रज़ा का निधन <strong>15 मार्च 1992</strong> को <strong>मुंबई</strong> में 64 वर्ष की आयु में एक संक्षिप्त बीमारी के बाद हुआ। वे एक ऐसी साहित्यिक विरासत छोड़ गए जो आज भी दुनिया भर में लाखों लोगों को प्रेरित करती है।</span>
+              </span>
+            </li>
+            <li><span class="rjw-bullet"></span>
+              <span>
+                <span class="en">His death was mourned across India. Literary associations, Urdu academies, and cultural organizations held condolence meetings in his honor. Doordarshan aired special programs remembering his immense contribution to Indian culture.</span>
+                <span class="hi">उनके निधन पर पूरे भारत में शोक व्याप्त हो गया। साहित्यिक संस्थाओं, उर्दू अकादमियों और सांस्कृतिक संगठनों ने उनके सम्मान में शोकसभाएँ आयोजित कीं। दूरदर्शन ने भारतीय संस्कृति में उनके अपार योगदान को याद करते हुए विशेष कार्यक्रम प्रसारित किए।</span>
+              </span>
+            </li>
+            <li><span class="rjw-bullet"></span>
+              <span>
+                <span class="en">Gangauli wept for its greatest son. The village that gave the world Dr. Rahi Masoom Raza continues to carry his name with immense pride. He is not just a literary figure — he is the <strong>identity of Gangauli</strong>.</span>
+                <span class="hi">गंगौली अपने महान सपूत के लिए रोया। वह गाँव जिसने दुनिया को डॉ. राही मासूम रज़ा दिए, आज भी उनका नाम अपार गर्व के साथ लिए चलता है। वे केवल एक साहित्यिक व्यक्तित्व नहीं हैं — वे <strong>गंगौली की पहचान</strong> हैं।</span>
+              </span>
+            </li>
+            <li><span class="rjw-bullet"></span>
+              <span>
+                <span class="en">'Aadha Gaon' has been <strong>translated into multiple languages</strong> including English, and continues to be studied in universities across India and abroad. It is included in curricula as a defining text of 20th-century Indian literature.</span>
+                <span class="hi">'आधा गाँव' का <strong>अंग्रेजी सहित अनेक भाषाओं में अनुवाद</strong> हुआ है, और यह भारत और विदेशों के विश्वविद्यालयों में पढ़ाया जाता रहता है। इसे 20वीं शताब्दी के भारतीय साहित्य की एक परिभाषित कृति के रूप में पाठ्यक्रम में शामिल किया गया है।</span>
+              </span>
+            </li>
+            <li><span class="rjw-bullet"></span>
+              <span>
+                <span class="en">The iconic words <strong>"Main Samay Hoon"</strong> from Mahabharat — written by this son of Gangauli — are etched permanently in the memory of hundreds of millions of Indians, making Dr. Rahi Masoom Raza truly immortal.</span>
+                <span class="hi">महाभारत के प्रतिष्ठित शब्द <strong>"मैं समय हूँ"</strong> — गंगौली के इस सपूत की लेखनी से निकले — अरबों भारतीयों की स्मृति में स्थायी रूप से अंकित हैं, जो डॉ. राही मासूम रज़ा को सच में अमर बनाते हैं।</span>
+              </span>
+            </li>
+          </ul>
+
+          <!-- Final quote -->
+          <div class="rjw-quote">
+            <p class="rjw-quote-text">
+              <span class="en">"गंगौली मेरी रूह में बसा है। मैं जहाँ भी रहूँ, गंगौली मेरे साथ है।" — <strong>Dr. Rahi Masoom Raza</strong></span>
+              <span class="hi">"गंगौली मेरी रूह में बसा है। मैं जहाँ भी रहूँ, गंगौली मेरे साथ है।" — <strong>डॉ. राही मासूम रज़ा</strong></span>
+            </p>
+          </div>
+        </div>
+
+      </div><!-- end rjw-body -->
+    </div><!-- end raza-jiwani-section -->
+
+    <div class="history-two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start;">
+      <div class="reveal">
+        <span class="section-label"><span class="en">Historical Timeline</span><span class="hi">ऐतिहासिक समयरेखा</span></span>
+        <h2 style="font-size:32px;margin-bottom:32px;">
+          <span class="en">Gangauli Through the Ages</span>
+          <span class="hi">युगों में गंगौली</span>
+        </h2>
+        <div class="history-timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year"><span class="en">Ancient Era</span><span class="hi">प्राचीन काल</span></div>
+            <h4 class="timeline-title"><span class="en">Settlement on Ganga Plains</span><span class="hi">गंगा के मैदानों पर बसावट</span></h4>
+            <p class="timeline-desc">
+              <span class="en">Gangauli's origins trace back centuries as a settlement on the fertile plains of the Ganga river, supporting a vibrant agrarian community.</span>
+              <span class="hi">गंगौली की उत्पत्ति सदियों पहले गंगा नदी के उपजाऊ मैदानों पर एक बस्ती के रूप में हुई, जो एक जीवंत कृषि समुदाय का समर्थन करती थी।</span>
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">1927</div>
+            <h4 class="timeline-title"><span class="en">Birth of Rahi Masoom Raza</span><span class="hi">राही मासूम रज़ा का जन्म</span></h4>
+            <p class="timeline-desc">
+              <span class="en">The village gained literary immortality with the birth of Dr. Rahi Masoom Raza, who would go on to become one of India's greatest writers.</span>
+              <span class="hi">गाँव को साहित्यिक अमरता तब मिली जब डॉ. राही मासूम रज़ा का जन्म हुआ, जो भारत के सबसे महान लेखकों में से एक बने।</span>
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">1966</div>
+            <h4 class="timeline-title"><span class="en">Aadha Gaon Published</span><span class="hi">आधा गाँव प्रकाशित</span></h4>
+            <p class="timeline-desc">
+              <span class="en">The publication of 'Aadha Gaon' (Half Village) put Gangauli permanently on India's literary map, depicting the social fabric of the village with masterful authenticity.</span>
+              <span class="hi">'आधा गाँव' के प्रकाशन ने गंगौली को भारत के साहित्यिक मानचित्र पर स्थायी रूप से स्थापित कर दिया, गाँव की सामाजिक संरचना को अद्वितीय प्रामाणिकता के साथ दर्शाया।</span>
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2000s</div>
+            <h4 class="timeline-title"><span class="en">Modern Development Era</span><span class="hi">आधुनिक विकास युग</span></h4>
+            <p class="timeline-desc">
+              <span class="en">With the dawn of the 21st century, Gangauli embraced modernization — new schools, health centers, and infrastructure while preserving its cultural identity.</span>
+              <span class="hi">21वीं सदी के आगमन के साथ, गंगौली ने आधुनिकीकरण को अपनाया — नए स्कूल, स्वास्थ्य केंद्र और बुनियादी ढाँचा, साथ ही अपनी सांस्कृतिक पहचान को संरक्षित करते हुए।</span>
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2021</div>
+            <h4 class="timeline-title"><span class="en">New Leadership, New Vision</span><span class="hi">नया नेतृत्व, नया विज़न</span></h4>
+            <p class="timeline-desc">
+              <span class="en">Saif Alsam "Raju" elected as Gram Pradhan, bringing renewed energy to village development with focus on roads, water, and education.</span>
+              <span class="hi">सैफ़ असलम "राजू" ग्राम प्रधान निर्वाचित हुए, सड़क, पानी और शिक्षा पर ध्यान केंद्रित करते हुए गाँव के विकास में नई ऊर्जा लाई।</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Village Facts (hidden on mobile, shown on home page) -->
+      <div class="village-facts-col reveal reveal-delay-2">
+        <span class="section-label"><span class="en">Village Facts</span><span class="hi">गाँव की जानकारी</span></span>
+        <h2 style="font-size:32px;margin-bottom:32px;">
+          <span class="en">Know Your Village</span>
+          <span class="hi">अपना गाँव जानें</span>
+        </h2>
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          <div style="background:var(--white);border-radius:12px;padding:20px 24px;display:flex;gap:16px;align-items:center;box-shadow:var(--shadow-sm);border:1px solid var(--gray-200);">
+            <div style="width:44px;height:44px;background:rgba(204,0,0,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--red-primary);font-size:18px;flex-shrink:0;">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+            <div>
+              <div style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gray-500);margin-bottom:4px;"><span class="en">Location</span><span class="hi">स्थान</span></div>
+              <div style="font-size:15px;font-weight:600;color:var(--black);">
+                <span class="en">Gangauli, Ghazipur District, Uttar Pradesh</span><span class="hi">गंगौली, जिला गाजीपुर, उत्तर प्रदेश</span>
+              </div>
+            </div>
+          </div>
+          <div style="background:var(--white);border-radius:12px;padding:20px 24px;display:flex;gap:16px;align-items:center;box-shadow:var(--shadow-sm);border:1px solid var(--gray-200);">
+            <div style="width:44px;height:44px;background:rgba(204,0,0,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--red-primary);font-size:18px;flex-shrink:0;">
+              <i class="fa-solid fa-code-branch"></i>
+            </div>
+            <div>
+              <div style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gray-500);margin-bottom:4px;"><span class="en">Block</span><span class="hi">ब्लॉक</span></div>
+              <div style="font-size:15px;font-weight:600;color:var(--black);">
+                <span class="en">Kasimabad</span><span class="hi">कासिमाबाद</span>
+              </div>
+            </div>
+          </div>
+          <div style="background:var(--white);border-radius:12px;padding:20px 24px;display:flex;gap:16px;align-items:center;box-shadow:var(--shadow-sm);border:1px solid var(--gray-200);">
+            <div style="width:44px;height:44px;background:rgba(201,168,76,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:18px;flex-shrink:0;">
+              <i class="fa-solid fa-envelope-open-text"></i>
+            </div>
+            <div>
+              <div style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gray-500);margin-bottom:4px;"><span class="en">PIN Code</span><span class="hi">पिन कोड</span></div>
+              <div style="font-size:15px;font-weight:600;color:var(--black);">233222</div>
+            </div>
+          </div>
+          <div style="background:var(--white);border-radius:12px;padding:20px 24px;display:flex;gap:16px;align-items:center;box-shadow:var(--shadow-sm);border:1px solid var(--gray-200);">
+            <div style="width:44px;height:44px;background:rgba(204,0,0,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--red-primary);font-size:18px;flex-shrink:0;">
+              <i class="fa-solid fa-landmark"></i>
+            </div>
+            <div>
+              <div style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gray-500);margin-bottom:4px;"><span class="en">Famous For</span><span class="hi">प्रसिद्धि</span></div>
+              <div style="font-size:15px;font-weight:600;color:var(--black);">
+                <span class="en">Dr. Rahi Masoom Raza &amp; 'Aadha Gaon'</span>
+                <span class="hi">डॉ. राही मासूम रज़ा और 'आधा गाँव'</span>
+              </div>
+            </div>
+          </div>
+          <div style="background:var(--white);border-radius:12px;padding:20px 24px;display:flex;gap:16px;align-items:center;box-shadow:var(--shadow-sm);border:1px solid var(--gray-200);">
+            <div style="width:44px;height:44px;background:rgba(204,0,0,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--red-primary);font-size:18px;flex-shrink:0;">
+              <i class="fa-solid fa-language"></i>
+            </div>
+            <div>
+              <div style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gray-500);margin-bottom:4px;"><span class="en">Main Languages</span><span class="hi">मुख्य भाषाएं</span></div>
+              <div style="font-size:15px;font-weight:600;color:var(--black);">
+                <span class="en">Hindi, Urdu, Bhojpuri</span>
+                <span class="hi">हिंदी, उर्दू, भोजपुरी</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ============ MOBILE-ONLY SHADAB FATIMA CARD ============ -->
+    <div class="mobile-shadab-card reveal">
+      <div class="shadab-mobile-card">
+        <div class="pmc-hero">
+          <img src="shadab.jpg" alt="Syeda Shadab Fatima" class="pmc-img" loading="lazy" />
+          <span class="pmc-badge"><span class="en">Political Icon</span><span class="hi">&#2352;&#2366;&#2332;&#2344;&#2368;&#2340;&#2367;&#2325; &#2346;&#2381;&#2352;&#2340;&#2368;&#2325;</span></span>
+        </div>
+        <div class="pmc-body">
+          <span class="pmc-tag"><span class="en">Born in Gangauli</span><span class="hi">&#2327;&#2306;&#2327;&#2380;&#2354;&#2368; &#2350;&#2375;&#2306; &#2332;&#2344;&#2381;&#2350;&#2368;</span></span>
+          <h2 class="pmc-name"><span class="en">Syeda Shadab Fatima</span><span class="hi">&#2360;&#2376;&#2351;&#2342;&#2366; &#2358;&#2342;&#2366;&#2348; &#2347;&#2366;&#2340;&#2367;&#2350;&#2366;</span></h2>
+          <p class="pmc-subtitle">
+            <span class="en">MLA 2007&ndash;12 &bull; MLA 2012&ndash;17 &bull; Cabinet Minister, UP</span>
+            <span class="hi">&#2357;&#2367;&#2343;&#2366;&#2351;&#2325; 2007&ndash;12 &bull; &#2357;&#2367;&#2343;&#2366;&#2351;&#2325; 2012&ndash;17 &bull; &#2325;&#2376;&#2348;&#2367;&#2344;&#2375;&#2335; &#2350;&#2306;&#2340;&#2381;&#2352;&#2368;, &#2313;.&#2346;&#2381;&#2352;.</span>
+          </p>
+          <div class="pmc-divider"></div>
+          <p class="pmc-desc">
+            <span class="en">Born in Gangauli, Ghazipur. Elected MLA twice and served as Cabinet Minister for Child Health &amp; Women Welfare in the Uttar Pradesh Government.</span>
+            <span class="hi">&#2327;&#2306;&#2327;&#2380;&#2354;&#2368;, &#2327;&#2366;&#2332;&#2368;&#2346;&#2369;&#2352; &#2350;&#2375;&#2306; &#2332;&#2344;&#2381;&#2350;&#2368;&#2306;&#2404; &#2342;&#2379; &#2348;&#2366;&#2352; &#2357;&#2367;&#2343;&#2366;&#2351;&#2325; &#2330;&#2369;&#2344;&#2368; &#2327;&#2312;&#2306; &#2324;&#2352; &#2313;.&#2346;&#2381;&#2352;. &#2360;&#2352;&#2325;&#2366;&#2352; &#2350;&#2375;&#2306; &#2348;&#2366;&#2354; &#2360;&#2381;&#2357;&#2366;&#2360;&#2381;&#2341;&#2381;&#2351; &#2319;&#2357;&#2306; &#2350;&#2361;&#2367;&#2354;&#2366; &#2325;&#2354;&#2381;&#2351;&#2366;&#2339; &#2350;&#2306;&#2340;&#2381;&#2352;&#2368; &#2346;&#2342; &#2346;&#2352; &#2325;&#2366;&#2352;&#2381;&#2351; &#2325;&#2367;&#2351;&#2366;&#2404;</span>
+          </p>
+          <div class="pmc-stats">
+            <div class="pmc-stat">
+              <div class="pmc-stat-icon"><i class="fa-solid fa-ballot-check"></i></div>
+              <div class="pmc-stat-title"><span class="en">2007</span><span class="hi">2007</span></div>
+              <div class="pmc-stat-sub"><span class="en">First MLA (BSP)</span><span class="hi">&#2346;&#2381;&#2352;&#2341;&#2350; &#2357;&#2367;&#2343;&#2366;&#2351;&#2325;</span></div>
+            </div>
+            <div class="pmc-stat">
+              <div class="pmc-stat-icon"><i class="fa-solid fa-star"></i></div>
+              <div class="pmc-stat-title"><span class="en">2012</span><span class="hi">2012</span></div>
+              <div class="pmc-stat-sub"><span class="en">Re-elected (SP)</span><span class="hi">&#2346;&#2369;&#2344;&#2307; &#2344;&#2367;&#2352;&#2381;&#2357;&#2366;&#2330;&#2367;&#2340;</span></div>
+            </div>
+            <div class="pmc-stat">
+              <div class="pmc-stat-icon"><i class="fa-solid fa-child-reaching"></i></div>
+              <div class="pmc-stat-title"><span class="en">Minister</span><span class="hi">&#2350;&#2306;&#2340;&#2381;&#2352;&#2368;</span></div>
+              <div class="pmc-stat-sub"><span class="en">Child &amp; Women</span><span class="hi">&#2350;&#2361;&#2367;&#2354;&#2366; &#2325;&#2354;&#2381;&#2351;&#2366;&#2339;</span></div>
+            </div>
+            <div class="pmc-stat">
+              <div class="pmc-stat-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="pmc-stat-title"><span class="en">Gangauli</span><span class="hi">&#2327;&#2306;&#2327;&#2380;&#2354;&#2368;</span></div>
+              <div class="pmc-stat-sub"><span class="en">Birthplace</span><span class="hi">&#2332;&#2344;&#2381;&#2350;&#2360;&#2381;&#2341;&#2366;&#2344;</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Journey Timeline — White bg, Red style matching Rahi's timeline -->
+      <div style="background:var(--white);border-radius:20px;padding:28px 20px 32px;margin-top:20px;box-shadow:var(--shadow-sm);border:1px solid var(--gray-200);">
+        <span class="section-label" style="font-size:10px;padding:4px 14px;">
+          <span class="en">Political Journey</span><span class="hi">&#2352;&#2366;&#2332;&#2344;&#2368;&#2340;&#2367;&#2325; &#2351;&#2366;&#2340;&#2381;&#2352;&#2366;</span>
+        </span>
+        <h3 style="font-size:22px;font-weight:800;color:var(--black);margin:12px 0 28px;line-height:1.3;">
+          <span class="en">Syeda Shadab Fatima &mdash; Journey of a Leader</span>
+          <span class="hi">&#2360;&#2376;&#2351;&#2342;&#2366; &#2358;&#2342;&#2366;&#2348; &#2347;&#2366;&#2340;&#2367;&#2350;&#2366; &mdash; &#2319;&#2325; &#2344;&#2375;&#2340;&#2366; &#2325;&#2368; &#2351;&#2366;&#2340;&#2381;&#2352;&#2366;</span>
+        </h3>
+        <div class="history-timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year"><span class="en">Born in Gangauli</span><span class="hi">&#2327;&#2306;&#2327;&#2380;&#2354;&#2368; &#2350;&#2375;&#2306; &#2332;&#2344;&#2381;&#2350;</span></div>
+            <h4 class="timeline-title"><span class="en">A Daughter of Gangauli</span><span class="hi">&#2327;&#2306;&#2327;&#2380;&#2354;&#2368; &#2325;&#2368; &#2319;&#2325; &#2348;&#2375;&#2335;&#2368;</span></h4>
+            <p class="timeline-desc">
+              <span class="en">Born into a respected family in Gangauli, Ghazipur. From a young age, she was aware of the social challenges faced by women and underprivileged communities in rural UP.</span>
+              <span class="hi">&#2327;&#2306;&#2327;&#2380;&#2354;&#2368;, &#2327;&#2366;&#2332;&#2368;&#2346;&#2369;&#2352; &#2325;&#2375; &#2319;&#2325; &#2360;&#2350;&#2381;&#2350;&#2366;&#2344;&#2367;&#2340; &#2346;&#2352;&#2367;&#2357;&#2366;&#2352; &#2350;&#2375;&#2306; &#2332;&#2344;&#2381;&#2350;&#2368;&#2404; &#2325;&#2350; &#2313;&#2350;&#2381;&#2352; &#2360;&#2375; &#2361;&#2368; &#2357;&#2375; &#2327;&#2381;&#2352;&#2366;&#2350;&#2368;&#2339; &#2313;&#2340;&#2381;&#2340;&#2352; &#2346;&#2381;&#2352;&#2342;&#2375;&#2358; &#2350;&#2375;&#2306; &#2350;&#2361;&#2367;&#2354;&#2366;&#2451;&#2306; &#2324;&#2352; &#2357;&#2306;&#2330;&#2367;&#2340; &#2360;&#2350;&#2369;&#2342;&#2366;&#2351;&#2379;&#2306; &#2325;&#2375; &#2360;&#2366;&#2350;&#2344;&#2375; &#2310;&#2344;&#2375; &#2357;&#2366;&#2354;&#2368; &#2360;&#2366;&#2350;&#2366;&#2332;&#2367;&#2325; &#2330;&#2369;&#2344;&#2380;&#2340;&#2367;&#2351;&#2379;&#2306; &#2360;&#2375; &#2309;&#2357;&#2327;&#2340; &#2341;&#2368;&#2306;&#2404;</span>
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2007</div>
+            <h4 class="timeline-title"><span class="en">First Election Victory &mdash; Ghazipur Sadar</span><span class="hi">&#2346;&#2361;&#2354;&#2368; &#2330;&#2369;&#2344;&#2366;&#2357; &#2332;&#2368;&#2340; &mdash; &#2327;&#2366;&#2332;&#2368;&#2346;&#2369;&#2352; &#2360;&#2342;&#2352;</span></h4>
+            <p class="timeline-desc">
+              <span class="en">Elected as MLA from Ghazipur Sadar Constituency on a BSP ticket in the 2007 UP elections. This marked the beginning of her state-level political career.</span>
+              <span class="hi">2007 &#2325;&#2375; &#2313;&#2340;&#2381;&#2340;&#2352; &#2346;&#2381;&#2352;&#2342;&#2375;&#2358; &#2357;&#2367;&#2343;&#2366;&#2344;&#2360;&#2349;&#2366; &#2330;&#2369;&#2344;&#2366;&#2357; &#2350;&#2375;&#2306; &#2348;&#2361;&#2369;&#2332;&#2344; &#2360;&#2350;&#2366;&#2332; &#2346;&#2366;&#2352;&#2381;&#2335;&#2368; (&#2348;&#2360;&#2346;&#2366;) &#2325;&#2375; &#2335;&#2367;&#2325;&#2335; &#2346;&#2352; &#2327;&#2366;&#2332;&#2368;&#2346;&#2369;&#2352; &#2360;&#2342;&#2352; &#2360;&#2375; &#2357;&#2367;&#2343;&#2366;&#2351;&#2325; &#2344;&#2367;&#2352;&#2381;&#2357;&#2366;&#2330;&#2367;&#2340; &#2361;&#2369;&#2312;&#2306;&#2404; &#2351;&#2361; &#2352;&#2366;&#2332;&#2381;&#2351; &#2360;&#2381;&#2340;&#2352; &#2346;&#2352; &#2313;&#2344;&#2325;&#2375; &#2352;&#2366;&#2332;&#2344;&#2368;&#2340;&#2367;&#2325; &#2325;&#2352;&#2367;&#2351;&#2352; &#2325;&#2368; &#2358;&#2369;&#2352;&#2369;&#2310;&#2340; &#2341;&#2368;&#2404;</span>
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2012</div>
+            <h4 class="timeline-title"><span class="en">Re-elected &mdash; Zahoorabad (SP)</span><span class="hi">&#2346;&#2369;&#2344;&#2307; &#2344;&#2367;&#2352;&#2381;&#2357;&#2366;&#2330;&#2367;&#2340; &mdash; &#2332;&#2361;&#2370;&#2352;&#2366;&#2348;&#2366;&#2342; &#2325;&#2381;&#2359;&#2375;&#2340;&#2381;&#2352; (&#2360;&#2346;&#2366;)</span></h4>
+            <p class="timeline-desc">
+              <span class="en">Won again from Zahoorabad Constituency on a Samajwadi Party ticket. Her second consecutive win confirmed her strong public support across constituencies.</span>
+              <span class="hi">2012 &#2325;&#2375; &#2313;&#2340;&#2381;&#2340;&#2352; &#2346;&#2381;&#2352;&#2342;&#2375;&#2358; &#2357;&#2367;&#2343;&#2366;&#2344;&#2360;&#2349;&#2366; &#2330;&#2369;&#2344;&#2366;&#2357; &#2350;&#2375;&#2306; &#2360;&#2350;&#2366;&#2332;&#2357;&#2366;&#2342;&#2368; &#2346;&#2366;&#2352;&#2381;&#2335;&#2368; (&#2360;&#2346;&#2366;) &#2325;&#2375; &#2335;&#2367;&#2325;&#2335; &#2346;&#2352; &#2332;&#2361;&#2370;&#2352;&#2366;&#2348;&#2366;&#2342; &#2360;&#2375; &#2346;&#2369;&#2344;&#2307; &#2332;&#2368;&#2340; &#2361;&#2366;&#2360;&#2367;&#2354; &#2325;&#2368;&#2404; &#2354;&#2327;&#2366;&#2340;&#2366;&#2352; &#2342;&#2370;&#2360;&#2352;&#2368; &#2332;&#2368;&#2340; &#2344;&#2375; &#2313;&#2344;&#2325;&#2375; &#2350;&#2332;&#2348;&#2370;&#2340; &#2332;&#2344;&#2360;&#2350;&#2352;&#2381;&#2341;&#2344; &#2325;&#2368; &#2346;&#2369;&#2359;&#2381;&#2335;&#2367; &#2325;&#2368;&#2404;</span>
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2012&ndash;17</div>
+            <h4 class="timeline-title"><span class="en">Minister &mdash; Child Health &amp; Women Welfare</span><span class="hi">&#2350;&#2306;&#2340;&#2381;&#2352;&#2368; &mdash; &#2348;&#2366;&#2354; &#2360;&#2381;&#2357;&#2366;&#2360;&#2381;&#2341;&#2381;&#2351; &#2319;&#2357;&#2306; &#2350;&#2361;&#2367;&#2354;&#2366; &#2325;&#2354;&#2381;&#2351;&#2366;&#2339;</span></h4>
+            <p class="timeline-desc">
+              <span class="en">Served as Cabinet Minister for Child Health and Women Welfare in the UP Government, championing women's empowerment, maternal health, and child nutrition across the state.</span>
+              <span class="hi">&#2313;&#2340;&#2381;&#2340;&#2352; &#2346;&#2381;&#2352;&#2342;&#2375;&#2358; &#2360;&#2352;&#2325;&#2366;&#2352; &#2350;&#2375;&#2306; &#2348;&#2366;&#2354; &#2360;&#2381;&#2357;&#2366;&#2360;&#2381;&#2341;&#2381;&#2351; &#2319;&#2357;&#2306; &#2350;&#2361;&#2367;&#2354;&#2366; &#2325;&#2354;&#2381;&#2351;&#2366;&#2339; &#2325;&#2368; &#2325;&#2376;&#2348;&#2367;&#2344;&#2375;&#2335; &#2350;&#2306;&#2340;&#2381;&#2352;&#2368; &#2325;&#2375; &#2352;&#2370;&#2346; &#2350;&#2375;&#2306; &#2325;&#2366;&#2352;&#2381;&#2351; &#2325;&#2367;&#2351;&#2366;&#2404; &#2311;&#2360; &#2349;&#2370;&#2350;&#2367;&#2325;&#2366; &#2350;&#2375;&#2306; &#2313;&#2344;&#2381;&#2361;&#2379;&#2306;&#2344;&#2375; &#2346;&#2370;&#2352;&#2375; &#2313;&#2340;&#2381;&#2340;&#2352; &#2346;&#2381;&#2352;&#2342;&#2375;&#2358; &#2350;&#2375;&#2306; &#2350;&#2361;&#2367;&#2354;&#2366; &#2360;&#2358;&#2325;&#2381;&#2340;&#2367;&#2325;&#2352;&#2339;, &#2350;&#2366;&#2340;&#2371; &#2360;&#2381;&#2357;&#2366;&#2360;&#2381;&#2341;&#2381;&#2351; &#2324;&#2352; &#2348;&#2366;&#2354; &#2346;&#2379;&#2359;&#2339; &#2325;&#2375; &#2354;&#2367;&#2319; &#2325;&#2366;&#2352;&#2381;&#2351;&#2325;&#2381;&#2352;&#2350;&#2379;&#2306; &#2325;&#2368; &#2346;&#2376;&#2352;&#2357;&#2368; &#2325;&#2368;&#2404;</span>
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year"><span class="en">Legacy</span><span class="hi">&#2357;&#2367;&#2352;&#2366;&#2360;&#2340;</span></div>
+            <h4 class="timeline-title"><span class="en">A Source of Pride for Gangauli</span><span class="hi">&#2327;&#2306;&#2327;&#2380;&#2354;&#2368; &#2325;&#2375; &#2354;&#2367;&#2319; &#2327;&#2380;&#2352;&#2357; &#2325;&#2366; &#2360;&#2381;&#2352;&#2379;&#2340;</span></h4>
+            <p class="timeline-desc">
+              <span class="en">Syeda Shadab Fatima remains an inspiring example for the women of Gangauli and the entire region, demonstrating that daughters of small villages can reach the highest levels of governance.</span>
+              <span class="hi">&#2360;&#2376;&#2351;&#2342;&#2366; &#2358;&#2342;&#2366;&#2348; &#2347;&#2366;&#2340;&#2367;&#2350;&#2366; &#2327;&#2306;&#2327;&#2380;&#2354;&#2368; &#2324;&#2352; &#2346;&#2370;&#2352;&#2375; &#2325;&#2381;&#2359;&#2375;&#2340;&#2381;&#2352; &#2325;&#2368; &#2350;&#2361;&#2367;&#2354;&#2366;&#2451;&#2306; &#2325;&#2375; &#2354;&#2367;&#2319; &#2319;&#2325; &#2346;&#2381;&#2352;&#2375;&#2352;&#2339;&#2366;&#2342;&#2366;&#2351;&#2325; &#2313;&#2342;&#2366;&#2361;&#2352;&#2339; &#2361;&#2376;&#2306;, &#2351;&#2361; &#2342;&#2352;&#2381;&#2358;&#2366;&#2340;&#2375; &#2361;&#2369;&#2319; &#2325;&#2367; &#2331;&#2379;&#2335;&#2375; &#2327;&#2366;&#2901;&#2357;&#2379;&#2306; &#2325;&#2368; &#2348;&#2375;&#2335;&#2367;&#2351;&#2366;&#2305; &#2358;&#2366;&#2360;&#2344; &#2325;&#2375; &#2313;&#2330;&#2381;&#2330;&#2340;&#2350; &#2360;&#2381;&#2340;&#2352; &#2340;&#2325; &#2346;&#2361;&#2369;&#2361;&#2305;&#2330; &#2360;&#2325;&#2340;&#2368; &#2361;&#2376;&#2306;&#2404;</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div><!-- end mobile-shadab-card -->
+
+    <!-- Shadab Fatima Feature (desktop) -->
+    <div class="shadab-desktop-profile" style="margin-bottom:70px;" id="shadab-fatima">
+      <div class="raza-profile reveal" style="background: linear-gradient(135deg, #0a2a4a, #051525);">
+        <div style="text-align:center;">
+          <img src="shadab.jpg" alt="Syeda Shadab Fatima" class="raza-img" loading="lazy" style="border-color:#1e6fad;box-shadow:0 0 0 10px rgba(30,111,173,0.2);" />
+          <div style="margin-top:16px;">
+            <span style="background:var(--gold);color:var(--black);font-size:11px;font-weight:800;padding:5px 16px;border-radius:50px;letter-spacing:1px;text-transform:uppercase;">
+              <span class="en">Political Icon</span><span class="hi">राजनीतिक प्रतीक</span>
+            </span>
+          </div>
+        </div>
+        <div>
+          <span class="section-label" style="background:rgba(30,111,173,0.2);border-color:rgba(30,111,173,0.4);">
+            <span class="en">Born in Gangauli</span><span class="hi">गंगौली में जन्मी</span>
+          </span>
+          <h2 class="raza-name">
+            <span class="en">Syeda Shadab Fatima</span>
+            <span class="hi">सैयदा शदाब फातिमा</span>
+          </h2>
+          <p style="color:var(--gold);font-size:13px;font-weight:600;letter-spacing:1px;margin-bottom:16px;">
+            <span class="en">MLA (2007–2012 &amp; 2012–2017) | Minister, Child Health &amp; Women Welfare, UP Govt.</span>
+            <span class="hi">विधायक (2007–2012 व 2012–2017) | मंत्री, बाल स्वास्थ्य एवं महिला कल्याण, उ.प्र. सरकार</span>
+          </p>
+          <p class="raza-desc">
+            <span class="en">Syeda Shadab Fatima was born in Gangauli, Ghazipur, Uttar Pradesh. She is a prominent Indian politician and social worker. She was elected as Member of the Uttar Pradesh Legislative Assembly from Ghazipur Sadar Constituency (2007) on a Bahujan Samaj Party ticket, and then from Zahoorabad Constituency (2012) on a Samajwadi Party ticket. She also served as Minister of Child Health and Women Welfare in the Uttar Pradesh Government, making her one of Gangauli's most distinguished daughters in public life.</span>
+            <span class="hi">सैयदा शदाब फातिमा का जन्म गंगौली, गाजीपुर, उत्तर प्रदेश में हुआ। वे एक प्रमुख भारतीय राजनीतिज्ञ और समाजसेवी हैं। उन्हें 2007 में बहुजन समाज पार्टी के टिकट पर गाजीपुर सदर विधानसभा क्षेत्र से और 2012 में समाजवादी पार्टी के टिकट पर जहूराबाद विधानसभा क्षेत्र से उत्तर प्रदेश विधानसभा की सदस्य चुना गया। वे उत्तर प्रदेश सरकार में बाल स्वास्थ्य एवं महिला कल्याण मंत्री के पद पर भी रहीं, जिससे वे सार्वजनिक जीवन में गंगौली की सबसे प्रतिष्ठित बेटियों में से एक बन गईं।</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Shadab Fatima Journey Timeline -->
+      <div class="reveal">
+        <span class="section-label"><span class="en">Political Journey</span><span class="hi">राजनीतिक यात्रा</span></span>
+        <h2 style="font-size:28px;margin-bottom:32px;">
+          <span class="en">Syeda Shadab Fatima — Journey of a Leader</span>
+          <span class="hi">सैयदा शदाब फातिमा — एक नेता की यात्रा</span>
+        </h2>
+        <div class="history-timeline" style="max-width:700px;">
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background:#1e6fad;border-color:#1e6fad;box-shadow:0 0 0 4px rgba(30,111,173,0.15);"></div>
+            <div class="timeline-year"><span class="en">Born in Gangauli</span><span class="hi">गंगौली में जन्म</span></div>
+            <h4 class="timeline-title"><span class="en">A Daughter of Gangauli</span><span class="hi">गंगौली की एक बेटी</span></h4>
+            <p class="timeline-desc">
+              <span class="en">Born into a respected family in Gangauli, Ghazipur. From a young age, she was aware of the social challenges faced by women and underprivileged communities in rural UP.</span>
+              <span class="hi">गंगौली, गाजीपुर के एक सम्मानित परिवार में जन्मी। कम उम्र से ही वे ग्रामीण उत्तर प्रदेश में महिलाओं और वंचित समुदायों के सामने आने वाली सामाजिक चुनौतियों से अवगत थीं।</span>
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background:#1e6fad;border-color:#1e6fad;box-shadow:0 0 0 4px rgba(30,111,173,0.15);"></div>
+            <div class="timeline-year">2007</div>
+            <h4 class="timeline-title"><span class="en">First Election Victory — Ghazipur Sadar</span><span class="hi">पहली चुनाव जीत — गाजीपुर सदर</span></h4>
+            <p class="timeline-desc">
+              <span class="en">Elected as MLA from Ghazipur Sadar Constituency on a Bahujan Samaj Party (BSP) ticket in the 2007 Uttar Pradesh Legislative Assembly elections. This marked the beginning of her political career at the state level.</span>
+              <span class="hi">2007 के उत्तर प्रदेश विधानसभा चुनाव में बहुजन समाज पार्टी (बसपा) के टिकट पर गाजीपुर सदर विधानसभा क्षेत्र से विधायक निर्वाचित हुईं। यह राज्य स्तर पर उनके राजनीतिक करियर की शुरुआत थी।</span>
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background:#1e6fad;border-color:#1e6fad;box-shadow:0 0 0 4px rgba(30,111,173,0.15);"></div>
+            <div class="timeline-year">2012</div>
+            <h4 class="timeline-title"><span class="en">Re-elected — Zahoorabad Constituency (SP)</span><span class="hi">पुनः निर्वाचित — जहूराबाद क्षेत्र (सपा)</span></h4>
+            <p class="timeline-desc">
+              <span class="en">Won again in the 2012 UP Assembly elections from Zahoorabad Constituency on a Samajwadi Party (SP) ticket. Her second consecutive win confirmed her strong public support across constituencies.</span>
+              <span class="hi">2012 के उत्तर प्रदेश विधानसभा चुनाव में समाजवादी पार्टी (सपा) के टिकट पर जहूराबाद विधानसभा क्षेत्र से पुनः जीत हासिल की। लगातार दूसरी जीत ने विधानसभा क्षेत्रों में उनके मजबूत जनसमर्थन की पुष्टि की।</span>
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background:#1e6fad;border-color:#1e6fad;box-shadow:0 0 0 4px rgba(30,111,173,0.15);"></div>
+            <div class="timeline-year">2012-17</div>
+            <h4 class="timeline-title"><span class="en">Minister — Child Health &amp; Women Welfare</span><span class="hi">मंत्री — बाल स्वास्थ्य एवं महिला कल्याण</span></h4>
+            <p class="timeline-desc">
+              <span class="en">Served as Cabinet Minister for Child Health and Women Welfare in the Uttar Pradesh Government. In this role she championed programs for women's empowerment, maternal health, and child nutrition across UP.</span>
+              <span class="hi">उत्तर प्रदेश सरकार में बाल स्वास्थ्य एवं महिला कल्याण की कैबिनेट मंत्री के रूप में कार्य किया। इस भूमिका में उन्होंने पूरे उत्तर प्रदेश में महिला सशक्तिकरण, मातृ स्वास्थ्य और बाल पोषण के लिए कार्यक्रमों की पैरवी की।</span>
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background:#1e6fad;border-color:#1e6fad;box-shadow:0 0 0 4px rgba(30,111,173,0.15);"></div>
+            <div class="timeline-year"><span class="en">Legacy</span><span class="hi">विरासत</span></div>
+            <h4 class="timeline-title"><span class="en">A Source of Pride for Gangauli</span><span class="hi">गंगौली के लिए गौरव का स्रोत</span></h4>
+            <p class="timeline-desc">
+              <span class="en">Syeda Shadab Fatima remains an inspiring example for the women of Gangauli and the entire region, demonstrating that daughters of small villages can reach the highest levels of governance.</span>
+              <span class="hi">सैयदा शदाब फातिमा गंगौली और पूरे क्षेत्र की महिलाओं के लिए एक प्रेरणादायक उदाहरण हैं, यह दर्शाते हुए कि छोटे गाँवों की बेटियां शासन के उच्चतम स्तर तक पहुँच सकती हैं।</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Culture Section -->
+    <div id="culture" style="margin-top:80px;">
+      <div style="text-align:center;margin-bottom:50px;">
+        <span class="section-label"><span class="en">Culture &amp; Heritage</span><span class="hi">संस्कृति और विरासत</span></span>
+        <h2 class="section-title reveal">
+          <span class="en">Gangauli's Living Heritage</span>
+          <span class="hi">गंगौली की जीवंत विरासत</span>
+        </h2>
+      </div>
+      <div class="culture-grid">
+        <div class="culture-card reveal reveal-delay-1">
+          <div style="width:48px;height:48px;background:linear-gradient(135deg,var(--red-primary),var(--red-dark));border-radius:12px;display:flex;align-items:center;justify-content:center;color:white;font-size:22px;margin-bottom:16px;">
+            <i class="fa-solid fa-place-of-worship"></i>
+          </div>
+          <h3><span class="en">Religious Harmony</span><span class="hi">धार्मिक सद्भाव</span></h3>
+          <p>
+            <span class="en">Gangauli is celebrated for its religious harmony, where temples and mosques stand side by side and festivals of all communities are celebrated together.</span>
+            <span class="hi">गंगौली अपने धार्मिक सद्भाव के लिए प्रसिद्ध है, जहाँ मंदिर और मस्जिद साथ-साथ हैं और सभी समुदायों के त्योहार एक साथ मनाए जाते हैं।</span>
+          </p>
+        </div>
+        <div class="culture-card reveal reveal-delay-2">
+          <div style="width:48px;height:48px;background:linear-gradient(135deg,var(--gold),#a07a20);border-radius:12px;display:flex;align-items:center;justify-content:center;color:white;font-size:22px;margin-bottom:16px;">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
+          <h3><span class="en">Literary Legacy</span><span class="hi">साहित्यिक विरासत</span></h3>
+          <p>
+            <span class="en">The village's greatest cultural treasure is its association with Dr. Rahi Masoom Raza, whose works have enriched Urdu and Hindi literature for generations.</span>
+            <span class="hi">गाँव का सबसे बड़ा सांस्कृतिक खजाना डॉ. राही मासूम रज़ा से उसका जुड़ाव है, जिनकी रचनाओं ने उर्दू और हिंदी साहित्य को पीढ़ियों से समृद्ध किया है।</span>
+          </p>
+        </div>
+        <div class="culture-card reveal reveal-delay-3">
+          <div style="width:48px;height:48px;background:linear-gradient(135deg,var(--red-primary),var(--red-dark));border-radius:12px;display:flex;align-items:center;justify-content:center;color:white;font-size:22px;margin-bottom:16px;">
+            <i class="fa-solid fa-wheat-awn"></i>
+          </div>
+          <h3><span class="en">Agrarian Roots</span><span class="hi">कृषि परंपरा</span></h3>
+          <p>
+            <span class="en">Agriculture remains the backbone of Gangauli's economy and culture. The seasonal festivals tied to harvests reflect a deep connection with the land.</span>
+            <span class="hi">कृषि गंगौली की अर्थव्यवस्था और संस्कृति की रीढ़ बनी हुई है। फसल से जुड़े मौसमी त्योहार भूमि से गहरे जुड़ाव को दर्शाते हैं।</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="logo_full.png" alt="Gangauli Times" class="footer-logo-img" />
+        <p class="footer-desc">
+          <span class="en">Gangauli is a historic village in Ghazipur district, Uttar Pradesh — famous as the birthplace of Dr. Rahi Masoom Raza and the backdrop of his iconic novel 'Aadha Gaon'. Known for its rich cultural heritage and literary significance.</span>
+          <span class="hi">गंगौली गाजीपुर जिले, उत्तर प्रदेश का एक ऐतिहासिक गाँव है, जो डॉ. राही मासूम रज़ा के जन्मस्थान और उनके प्रसिद्ध उपन्यास 'आधा गाँव' की पृष्ठभूमि के रूप में प्रसिद्ध है। अपनी समृद्ध सांस्कृतिक विरासत और साहित्यिक महत्व के लिए जाना जाता है।</span>
+        </p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/gangaulitimes" target="_blank" rel="noopener" class="footer-social-btn facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/gangaulitimes" target="_blank" rel="noopener" class="footer-social-btn instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@GangauliTimes" target="_blank" rel="noopener" class="footer-social-btn youtube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading"><span class="en">Quick Links</span><span class="hi">त्वरित लिंक</span></h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><span class="en">Home</span><span class="hi">होम</span></a></li>
+          <li><a href="gram-pradhan.html"><span class="en">Gram Pradhan</span><span class="hi">ग्राम प्रधान</span></a></li>
+          <li><a href="bdc-members.html"><span class="en">BDC Members</span><span class="hi">बी.डी.सी. सदस्य</span></a></li>
+          <li><a href="history.html"><span class="en">Village History</span><span class="hi">गाँव का इतिहास</span></a></li>
+          <li><a href="schools.html"><span class="en">Schools</span><span class="hi">स्कूल</span></a></li>
+          <li><a href="contact.html"><span class="en">Contact</span><span class="hi">संपर्क करें</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading"><span class="en">Explore</span><span class="hi">अन्वेषण</span></h4>
+        <ul class="footer-links">
+          <li><a href="gallery.html"><span class="en">Gallery</span><span class="hi">गैलरी</span></a></li>
+          <li><a href="history.html#culture"><span class="en">Culture &amp; Heritage</span><span class="hi">संस्कृति और विरासत</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading"><span class="en">Contact</span><span class="hi">संपर्क</span></h4>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="footer-contact-text"><span class="en">Gangauli, Kasimabad, Ghazipur, UP — 233222</span><span class="hi">गंगौली, कासिमाबाद, गाजीपुर, उ.प्र. — 233222</span></div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="footer-contact-text">info.gangaulitimes@gmail.com</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+      <span><span class="en">&copy; 2025 Gangauli Times.</span><span class="hi">&copy; 2025 गंगौली टाइम्स।</span></span>
+      <span><span class="en">Made with <span style="color:var(--red-primary);">&#10084;</span> for Gangauli</span><span class="hi">गंगौली के लिए <span style="color:var(--red-primary);">&#10084;</span> से बनाया</span></span>
+    </div>
+  </div>
+</footer>
+<button class="back-to-top" id="back-to-top"><i class="fa-solid fa-chevron-up"></i></button>
+<script src="main.js"></script>
+</body>
+</html>
+
+
+
+

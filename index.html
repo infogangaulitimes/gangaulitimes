@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gangauli Times — गंगौली, गाजीपुर का आधिकारिक समाचार पोर्टल</title>
+  <meta name="description" content="गंगौली, गाजीपुर जिले, उत्तर प्रदेश का आधिकारिक सूचना पोर्टल। डॉ. राही मासूम रज़ा के जन्मस्थान का डिजिटल प्रतिनिधित्व।" />
+  <meta name="keywords" content="Gangauli, Ghazipur, UP, village, gram panchayat, Rahi Masoom Raza, Gangauli Times" />
+  <link rel="canonical" href="https://gangaulitimes.in/" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <!-- Facebook SDK for live feed -->
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/hi_IN/sdk.js#xfbml=1&version=v19.0"></script>
+</head>
+<body class="lang-hi">
+
+
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav class="navbar" role="navigation" aria-label="Main Navigation">
+  <div class="container">
+    <a href="index.html" class="navbar-brand" aria-label="Gangauli Times Home">
+      <img src="logo.png" alt="Gangauli Times Logo" class="navbar-logo" />
+    </a>
+
+    <ul class="navbar-nav">
+      <li><a href="index.html" class="nav-link active"><span class="en">Home</span><span class="hi">होम</span></a></li>
+      <li><a href="gram-pradhan.html" class="nav-link"><span class="en">Gram Pradhan</span><span class="hi">ग्राम प्रधान</span></a></li>
+      <li><a href="bdc-members.html" class="nav-link"><span class="en">BDC Members</span><span class="hi">बी.डी.सी. सदस्य</span></a></li>
+      <li><a href="history.html" class="nav-link"><span class="en">Village History</span><span class="hi">गाँव का इतिहास</span></a></li>
+      <li><a href="schools.html" class="nav-link"><span class="en">Schools</span><span class="hi">स्कूल</span></a></li>
+      <li><a href="gallery.html" class="nav-link"><span class="en">Gallery</span><span class="hi">गैलरी</span></a></li>
+      <li><a href="contact.html" class="nav-link"><span class="en">Contact</span><span class="hi">संपर्क करें</span></a></li>
+    </ul>
+
+    <!-- Language Toggle in Navbar -->
+    <div class="navbar-lang" id="navbar-lang">
+      <button class="nav-lang-btn" id="lang-en" title="English">EN</button>
+      <span class="nav-lang-divider">|</span>
+      <button class="nav-lang-btn active" id="lang-hi" title="हिंदी">HI</button>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle Mobile Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html" class="nav-link"><span class="en">Home</span><span class="hi">होम</span></a>
+    <a href="gram-pradhan.html" class="nav-link"><span class="en">Gram Pradhan</span><span class="hi">ग्राम प्रधान</span></a>
+    <a href="bdc-members.html" class="nav-link"><span class="en">BDC Members</span><span class="hi">बी.डी.सी. सदस्य</span></a>
+    <a href="history.html" class="nav-link"><span class="en">Village History</span><span class="hi">गाँव का इतिहास</span></a>
+    <a href="schools.html" class="nav-link"><span class="en">Schools</span><span class="hi">स्कूल</span></a>
+    <a href="gallery.html" class="nav-link"><span class="en">Gallery</span><span class="hi">गैलरी</span></a>
+    <a href="contact.html" class="nav-link"><span class="en">Contact</span><span class="hi">संपर्क करें</span></a>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO SLIDER
+     ============================================================ -->
+<section class="hero-slider" aria-label="Hero Image Slider">
+
+  <!-- Slide 1 -->
+  <div class="slide active" id="slide-1">
+    <img src="slider3.jpg" alt="Agla Davedar Kaun — Gram Panchayat Gangauli" class="slide-img" />
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slide" id="slide-2">
+    <img src="slider4.jpg" alt="Temple and Mosque — Communal Harmony of Gangauli" class="slide-img" />
+  </div>
+
+  <!-- Slider Controls -->
+  <button class="slider-arrow slider-arrow-prev" id="slider-prev" aria-label="Previous Slide">
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
+  <button class="slider-arrow slider-arrow-next" id="slider-next" aria-label="Next Slide">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+
+  <div class="slider-dots" role="tablist">
+    <button class="slider-dot active" aria-label="Slide 1" role="tab"></button>
+    <button class="slider-dot" aria-label="Slide 2" role="tab"></button>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     ABOUT SECTION
+     ============================================================ -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-content reveal">
+        <span class="section-label"><span class="en">About Gangauli</span><span class="hi">गंगौली के बारे में</span></span>
+        <div class="gold-line"></div>
+        <h2 class="about-title">
+          <span class="en">A Village Where<br/>History Lives On</span>
+          <span class="hi">एक गाँव जहाँ<br/>इतिहास जीवित है</span>
+        </h2>
+        <p class="about-text">
+          <span class="en">Gangauli is a historic village in Ghazipur district, Uttar Pradesh — celebrated as the birthplace of the legendary literary figure Dr. Rahi Masoom Raza and the backdrop of his iconic novel <em>'Aadha Gaon'</em>. Known for its rich cultural heritage and profound literary significance, Gangauli holds a unique place on the map of India.</span>
+          <span class="hi">गंगौली गाजीपुर जिले, उत्तर प्रदेश का एक ऐतिहासिक गाँव है, जो डॉ. राही मासूम रज़ा के जन्मस्थान और उनके प्रसिद्ध उपन्यास <em>'आधा गाँव'</em> की पृष्ठभूमि के रूप में प्रसिद्ध है। अपनी समृद्ध सांस्कृतिक विरासत और साहित्यिक महत्व के लिए जाना जाता है।</span>
+        </p>
+        <a href="history.html" class="btn btn-outline">
+          <span class="en">Read Full History</span><span class="hi">पूरा इतिहास पढ़ें</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-grid">
+        <div class="stat-card reveal reveal-delay-1">
+          <div class="stat-number" data-target="5000" data-suffix="+">0</div>
+          <div class="stat-label"><span class="en">Population</span><span class="hi">जनसंख्या</span></div>
+        </div>
+        <div class="stat-card reveal reveal-delay-2">
+          <div class="stat-number" data-target="650" data-suffix="+">0</div>
+          <div class="stat-label"><span class="en">Houses</span><span class="hi">घर</span></div>
+        </div>
+        <div class="stat-card reveal reveal-delay-3">
+          <div class="stat-number" style="font-size:32px;">4.8</div>
+          <div class="stat-label" style="margin-top:8px;"><span class="en">Area (Sq. Km.)</span><span class="hi">क्षेत्रफल (वर्ग किमी)</span></div>
+        </div>
+        <div class="stat-card reveal reveal-delay-4">
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-label"><span class="en">Wards</span><span class="hi">वार्ड</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+VILLAGE QUICK FACTS (compact strip)
+============================================================ -->
+<section class="village-facts-strip">
+  <div class="container">
+    <div class="vf-grid">
+      <div class="vf-item reveal reveal-delay-1">
+        <div class="vf-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+        <div class="vf-content">
+          <span class="vf-label"><span class="en">Location</span><span class="hi">स्थान</span></span>
+          <span class="vf-value"><span class="en">Gangauli, Ghazipur, UP</span><span class="hi">गंगौली, गाजीपुर, उ.प्र.</span></span>
+        </div>
+      </div>
+      <div class="vf-item reveal reveal-delay-2">
+        <div class="vf-icon"><i class="fa-solid fa-code-branch"></i></div>
+        <div class="vf-content">
+          <span class="vf-label"><span class="en">Block</span><span class="hi">ब्लॉक</span></span>
+          <span class="vf-value"><span class="en">Kasimabad</span><span class="hi">कासिमाबाद</span></span>
+        </div>
+      </div>
+      <div class="vf-item reveal reveal-delay-3">
+        <div class="vf-icon" style="color:var(--gold);"><i class="fa-solid fa-envelope-open-text"></i></div>
+        <div class="vf-content">
+          <span class="vf-label"><span class="en">PIN Code</span><span class="hi">पिन कोड</span></span>
+          <span class="vf-value">233222</span>
+        </div>
+      </div>
+      <div class="vf-item reveal reveal-delay-4">
+        <div class="vf-icon"><i class="fa-solid fa-landmark"></i></div>
+        <div class="vf-content">
+          <span class="vf-label"><span class="en">Famous For</span><span class="hi">प्रसिद्धि</span></span>
+          <span class="vf-value"><span class="en">Rahi Masoom Raza &amp; 'Aadha Gaon'</span><span class="hi">राही मासूम रज़ा व 'आधा गाँव'</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+VILLAGE PULSE SECTION
+     ============================================================ -->
+<section class="pulse-section section" id="village-pulse">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label"><span class="en">Our Village</span><span class="hi">हमारा गाँव</span></span>
+      <h2 class="section-title reveal">
+        <span class="en">The Heartbeat of Our Village</span>
+        <span class="hi">हमारे गाँव की धड़कन</span>
+      </h2>
+      <p class="section-subtitle reveal reveal-delay-1">
+        <span class="en">Gangauli thrives across every dimension of rural life — from fertile fields to spiritual spaces.</span>
+        <span class="hi">गंगौली ग्रामीण जीवन के हर आयाम में जीवंत है — उपजाऊ खेतों से लेकर आध्यात्मिक स्थलों तक।</span>
+      </p>
+    </div>
+
+    <div class="pulse-grid">
+      <!-- Agriculture -->
+      <div class="pulse-card reveal reveal-delay-1">
+        <img src="agriculture-real.jpg" alt="Agriculture in Gangauli" class="pulse-card-img" loading="lazy" />
+        <div class="pulse-card-body">
+          <div class="pulse-card-title-row">
+            <div class="pulse-card-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+            <h3 class="pulse-card-title"><span class="en">Agriculture</span><span class="hi">कृषि</span></h3>
+          </div>
+          <p class="pulse-card-desc">
+            <span class="en">Fertile lands along the Ganga plains produce wheat, rice, and mustard — the backbone of Gangauli's livelihood.</span>
+            <span class="hi">गंगा के मैदानों की उपजाऊ भूमि गेहूं, चावल और सरसों उगाती है — गंगौली की आजीविका की रीढ़।</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="pulse-card reveal reveal-delay-2">
+        <img src="school.png" alt="Education in Gangauli" class="pulse-card-img" loading="lazy" />
+        <div class="pulse-card-body">
+          <div class="pulse-card-title-row">
+            <div class="pulse-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3 class="pulse-card-title"><span class="en">Education</span><span class="hi">शिक्षा</span></h3>
+          </div>
+          <p class="pulse-card-desc">
+            <span class="en">With primary schools, madrasas, colleges and private institutions, Gangauli is committed to quality education for all.</span>
+            <span class="hi">प्राथमिक विद्यालय, मदरसे, कॉलेज और निजी संस्थानों के साथ गंगौली सभी के लिए गुणवत्तापूर्ण शिक्षा के प्रति प्रतिबद्ध है।</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Religious Sites -->
+      <div class="pulse-card reveal reveal-delay-3">
+        <img src="religious-real.jpg" alt="Religious Places in Gangauli" class="pulse-card-img" loading="lazy" />
+        <div class="pulse-card-body">
+          <div class="pulse-card-title-row">
+            <div class="pulse-card-icon"><i class="fa-solid fa-place-of-worship"></i></div>
+            <h3 class="pulse-card-title"><span class="en">Religious Sites</span><span class="hi">धार्मिक स्थल</span></h3>
+          </div>
+          <p class="pulse-card-desc">
+            <span class="en">Ancient temples and mosques stand side by side, symbolizing the communal harmony that defines Gangauli.</span>
+            <span class="hi">प्राचीन मंदिर और मस्जिदें साथ-साथ खड़ी हैं, जो गंगौली की साम्प्रदायिक सद्भावना का प्रतीक हैं।</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Health -->
+      <div class="pulse-card reveal reveal-delay-4">
+        <img src="health-real.jpg" alt="ग्राम पंचायत सचिवालय गंगौली" class="pulse-card-img" loading="lazy" />
+        <div class="pulse-card-body">
+          <div class="pulse-card-title-row">
+            <div class="pulse-card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            <h3 class="pulse-card-title"><span class="en">Healthcare</span><span class="hi">स्वास्थ्य</span></h3>
+          </div>
+          <p class="pulse-card-desc">
+            <span class="en">Primary Health Centers and community health workers serve the village with basic medical facilities round the year.</span>
+            <span class="hi">प्राथमिक स्वास्थ्य केंद्र और सामुदायिक स्वास्थ्य कार्यकर्ता साल भर बुनियादी चिकित्सा सुविधाएं प्रदान करते हैं।</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Development -->
+      <div class="pulse-card reveal reveal-delay-5">
+        <img src="development-real.jpg" alt="Development in Gangauli" class="pulse-card-img" loading="lazy" />
+        <div class="pulse-card-body">
+          <div class="pulse-card-title-row">
+            <div class="pulse-card-icon"><i class="fa-solid fa-road"></i></div>
+            <h3 class="pulse-card-title"><span class="en">Development</span><span class="hi">विकास</span></h3>
+          </div>
+          <p class="pulse-card-desc">
+            <span class="en">New roads, drainage systems, and infrastructure projects are transforming Gangauli into a model village.</span>
+            <span class="hi">नई सड़कें, नाली प्रणाली और बुनियादी ढाँचे की परियोजनाएं गंगौली को एक आदर्श गाँव में बदल रही हैं।</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Festivals -->
+      <div class="pulse-card reveal reveal-delay-6">
+        <img src="festival.png" alt="Festivals of Gangauli" class="pulse-card-img" loading="lazy" />
+        <div class="pulse-card-body">
+          <div class="pulse-card-title-row">
+            <div class="pulse-card-icon"><i class="fa-solid fa-star-and-crescent"></i></div>
+            <h3 class="pulse-card-title"><span class="en">Festivals &amp; Culture</span><span class="hi">त्योहार और संस्कृति</span></h3>
+          </div>
+          <p class="pulse-card-desc">
+            <span class="en">Eid, Holi, Diwali, and local fairs are celebrated with equal enthusiasm, uniting the village in joy.</span>
+            <span class="hi">ईद, होली, दिवाली और स्थानीय मेले समान उत्साह के साथ मनाए जाते हैं, जो पूरे गाँव को खुशी में एकजुट करते हैं।</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GRAM PRADHAN SECTION
+     ============================================================ -->
+<section class="pradhan-section" id="gram-pradhan">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="section-header" style="margin-bottom:52px;">
+      <span class="section-label" style="background:rgba(204,0,0,0.15);border-color:rgba(204,0,0,0.35);color:rgba(255,200,200,0.9);">
+        <span class="en">Village Leadership</span><span class="hi">ग्राम नेतृत्व</span>
+      </span>
+      <h2 class="section-title reveal" style="color:var(--white);">
+        <span class="en">Gram Pradhan</span>
+        <span class="hi">ग्राम प्रधान</span>
+      </h2>
+      <p class="section-subtitle reveal reveal-delay-1" style="color:rgba(255,255,255,0.6);">
+        <span class="en">Elected representative of Gram Sabha Gangauli — 2021 to 2026</span>
+        <span class="hi">ग्राम सभा गंगौली के निर्वाचित प्रतिनिधि — 2021 से 2026</span>
+      </p>
+    </div>
+
+    <!-- Pradhan Card -->
+    <div class="pradhan-main-card reveal">
+
+      <!-- Left: Photo Column -->
+      <div class="pradhan-photo-col">
+        <div class="pradhan-img-wrap">
+          <img src="pradhan.jpg" alt="Saif Alsam Raju - Gram Pradhan Gangauli" class="pradhan-img" loading="lazy" />
+          <span class="pradhan-badge"><i class="fa-solid fa-star"></i> Pradhan</span>
+        </div>
+        <h3 class="pradhan-name">
+          <span class="en">Saif Alsam "Raju"</span>
+          <span class="hi">सैफ़ असलम "राजू"</span>
+        </h3>
+        <div class="pradhan-title">
+          <span class="en">Gram Pradhan</span><span class="hi">ग्राम प्रधान</span>
+        </div>
+        <span class="pradhan-period"><i class="fa-regular fa-calendar"></i> 2021 – 2026</span>
+      </div>
+
+      <!-- Right: Content Column -->
+      <div class="pradhan-info-col">
+
+        <!-- Bio -->
+        <p class="pradhan-bio">
+          <span class="en">Saif Alsam, affectionately known as <strong>"Raju Bhaiya"</strong> by the villagers, was elected as the Gram Pradhan of Gangauli in the 2021 Panchayat elections. Born and raised in Gangauli, he has a deep understanding of the village's needs and aspirations. He works closely with all 15 wards to ensure equitable development across the village.</span>
+          <span class="hi">सैफ़ असलम, जिन्हें गाँव वाले प्यार से <strong>"राजू भैया"</strong> बुलाते हैं, 2021 के पंचायत चुनाव में गंगौली के ग्राम प्रधान निर्वाचित हुए। गंगौली में जन्मे और पले-बढ़े, वे गाँव की ज़रूरतों और आकांक्षाओं की गहरी समझ रखते हैं। वे सभी 15 वार्डों के साथ मिलकर समान विकास के लिए काम करते हैं।</span>
+        </p>
+
+        <!-- Vision Quote -->
+        <div class="pradhan-vision">
+          <span class="pradhan-vision-label">
+            <i class="fa-solid fa-quote-left"></i>
+            <span class="en">My Vision</span><span class="hi">मेरा विज़न</span>
+          </span>
+          <p class="pradhan-vision-text">
+            <span class="en">"My vision is to make Gangauli a model village — with better roads, clean water, quality education, and employment opportunities for our youth."</span>
+            <span class="hi">"मेरा विज़न है कि गंगौली को बेहतर सड़कों, स्वच्छ पानी, गुणवत्तापूर्ण शिक्षा और युवाओं के लिए रोजगार के साथ एक आदर्श गाँव बनाना।"</span>
+          </p>
+        </div>
+
+        <!-- Action Buttons (Single line on mobile & compact) -->
+        <div class="pradhan-actions-row">
+          <a href="gram-pradhan.html" class="pradhan-cta-btn pradhan-btn-compact">
+            <span class="en">View Profile</span>
+            <span class="hi">पूरी प्रोफाइल देखें</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="tel:+918400973132" class="pradhan-cta-btn pradhan-btn-compact pradhan-call-btn">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 84009 73132</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ============================================================
+     SCHOOL SECTION (HOME)
+     ============================================================ -->
+<section class="schools-home-section" id="schools">
+  <div class="container">
+    <div class="schools-feature">
+      <div class="schools-image-wrap reveal">
+        <img src="school.png" alt="Schools in Gangauli" loading="lazy" />
+        <div class="schools-image-overlay">
+          <h3><span class="en">Building Tomorrow's Leaders</span><span class="hi">कल के नेताओं का निर्माण</span></h3>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2">
+        <span class="section-label"><span class="en">Education Hub</span><span class="hi">शिक्षा का केंद्र</span></span>
+        <h2 class="section-title" style="text-align:left;margin-bottom:12px;">
+          <span class="en">Schools &amp; Education</span>
+          <span class="hi">स्कूल और शिक्षा</span>
+        </h2>
+        <p class="section-subtitle" style="text-align:left;margin:0 0 28px 0;">
+          <span class="en">Gangauli has a well-developed educational infrastructure with primary schools, madrasas, colleges and private schools.</span>
+          <span class="hi">गंगौली में प्राथमिक विद्यालय, मदरसे, कॉलेज और निजी स्कूलों के साथ एक सुविकसित शैक्षणिक संरचना है।</span>
+        </p>
+
+        <div class="school-stats">
+          <div class="school-stat-item">
+            <span class="school-stat-number">2</span>
+            <span class="school-stat-label"><span class="en">Primary Schools</span><span class="hi">प्राथमिक विद्यालय</span></span>
+          </div>
+          <div class="school-stat-item">
+            <span class="school-stat-number">2</span>
+            <span class="school-stat-label"><span class="en">Madrasas</span><span class="hi">मदरसे</span></span>
+          </div>
+          <div class="school-stat-item">
+            <span class="school-stat-number">2</span>
+            <span class="school-stat-label"><span class="en">Colleges</span><span class="hi">कॉलेज</span></span>
+          </div>
+          <div class="school-stat-item">
+            <span class="school-stat-number">5</span>
+            <span class="school-stat-label"><span class="en">Other Schools</span><span class="hi">अन्य स्कूल</span></span>
+          </div>
+        </div>
+
+        <a href="schools.html" class="btn btn-primary">
+          <span class="en">View All Schools</span><span class="hi">सभी स्कूल देखें</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BDC SECTION (HOME PREVIEW)
+     ============================================================ -->
+<section class="bdc-home-section" id="bdc">
+  <style>
+    .bdc-home-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 36px;
+    }
+    .bdc-hcard {
+      background: var(--white);
+      border-radius: 18px;
+      padding: 24px 18px 20px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border: 1px solid var(--gray-200);
+      transition: transform .22s, box-shadow .22s;
+      position: relative;
+      overflow: hidden;
+    }
+    .bdc-hcard::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--red-primary);
+      border-radius: 18px 18px 0 0;
+    }
+    .bdc-hcard.gold::before { background: var(--gold); }
+    .bdc-hcard:hover { transform: translateY(-5px); box-shadow: 0 12px 36px rgba(0,0,0,0.14); }
+    .bdc-hcard-img {
+      width: 88px; height: 88px; border-radius: 50%;
+      object-fit: cover; object-position: top center;
+      margin: 0 auto 14px;
+      display: block;
+      border: 3px solid var(--red-primary);
+      box-shadow: 0 6px 18px rgba(204,0,0,0.25);
+    }
+    .bdc-hcard.gold .bdc-hcard-img {
+      border-color: var(--gold);
+      box-shadow: 0 6px 18px rgba(201,168,76,0.3);
+    }
+    .bdc-hcard-avatar {
+      width: 88px; height: 88px; border-radius: 50%;
+      margin: 0 auto 14px; display: flex;
+      align-items: center; justify-content: center;
+      font-size: 34px; color: rgba(255,255,255,0.9);
+      border: 3px solid rgba(255,255,255,0.2);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    }
+    .bdc-hcard-role {
+      display: inline-block;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase;
+      color: var(--red-primary);
+      background: rgba(204,0,0,0.08);
+      border-radius: 20px; padding: 3px 10px;
+      margin-bottom: 8px;
+    }
+    .bdc-hcard.gold .bdc-hcard-role { color: #7a5c0c; background: rgba(201,168,76,0.12); }
+    .bdc-hcard-name {
+      font-size: 15px; font-weight: 800;
+      color: var(--black); line-height: 1.3;
+      margin-bottom: 8px;
+    }
+    .bdc-hcard-ward {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 12px; font-weight: 600;
+      color: var(--gray-500);
+      background: var(--gray-100);
+      border-radius: 20px; padding: 4px 12px;
+    }
+    @media(max-width: 760px) {
+      .bdc-home-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media(max-width: 480px) {
+      .bdc-home-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+      .bdc-hcard { padding: 18px 12px 16px; }
+      .bdc-hcard-img, .bdc-hcard-avatar { width: 72px; height: 72px; font-size: 26px; }
+      .bdc-hcard-name { font-size: 13px; }
+    }
+  </style>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label"><span class="en">Representatives</span><span class="hi">प्रतिनिधि</span></span>
+      <h2 class="section-title reveal">
+        <span class="en">Community Representatives</span>
+        <span class="hi">सामुदायिक प्रतिनिधि</span>
+      </h2>
+      <p class="section-subtitle reveal reveal-delay-1">
+        <span class="en">Meet our dedicated Block Development Committee members who work tirelessly for the development of each ward.</span>
+        <span class="hi">हमारे समर्पित ब्लॉक विकास समिति सदस्यों से मिलें जो प्रत्येक वार्ड के विकास के लिए अथक प्रयास करते हैं।</span>
+      </p>
+    </div>
+
+    <div class="bdc-home-grid">
+
+      <!-- Vikas Saini -->
+      <div class="bdc-hcard reveal reveal-delay-1">
+        <img src="bdc-vikas.jpg" alt="Vikas Saini" class="bdc-hcard-img" loading="lazy" />
+        <div class="bdc-hcard-role"><span class="en">BDC Member</span><span class="hi">बी..सी. सदस्य</span></div>
+        <div class="bdc-hcard-name"><span class="en">Vikas Saini</span><span class="hi">विकास सैनी</span></div>
+        <span class="bdc-hcard-ward"><i class="fa-solid fa-map-pin" style="color:var(--red-primary);font-size:10px;"></i><span class="en">Ward 1–3</span><span class="hi">वार्ड 1–3</span></span>
+      </div>
+
+      <!-- Mohd. Salim -->
+      <div class="bdc-hcard gold reveal reveal-delay-2">
+        <img src="bdc-salim.jpg" alt="Mohd. Salim" class="bdc-hcard-img" loading="lazy" />
+        <div class="bdc-hcard-role"><span class="en">BDC Member</span><span class="hi">बी..सी. सदस्य</span></div>
+        <div class="bdc-hcard-name"><span class="en">Mohd. Salim (Uda)</span><span class="hi">मो. सलीम (उदा)</span></div>
+        <span class="bdc-hcard-ward"><i class="fa-solid fa-map-pin" style="color:var(--gold);font-size:10px;"></i><span class="en">Ward 4–7</span><span class="hi">वार्ड 4–7</span></span>
+      </div>
+
+      <!-- Ram Kabir Rajbhar -->
+      <div class="bdc-hcard reveal reveal-delay-3">
+        <div class="bdc-hcard-avatar" style="background:linear-gradient(135deg,#374151,#6b7280);">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="bdc-hcard-role"><span class="en">BDC Member</span><span class="hi">बी..सी. सदस्य</span></div>
+        <div class="bdc-hcard-name"><span class="en">Ram Kabir Rajbhar</span><span class="hi">राम कबीर राजभर</span></div>
+        <span class="bdc-hcard-ward"><i class="fa-solid fa-map-pin" style="color:var(--red-primary);font-size:10px;"></i><span class="en">Ward 8–12</span><span class="hi">वार्ड 8–12</span></span>
+      </div>
+
+      <!-- Vinod Yadav -->
+      <div class="bdc-hcard gold reveal reveal-delay-4">
+        <img src="bdc-vinod.jpg" alt="Vinod Yadav" class="bdc-hcard-img" loading="lazy" />
+        <div class="bdc-hcard-role"><span class="en">BDC Member</span><span class="hi">बी..सी. सदस्य</span></div>
+        <div class="bdc-hcard-name"><span class="en">Vinod Yadav</span><span class="hi">विनोद यादव</span></div>
+        <span class="bdc-hcard-ward"><i class="fa-solid fa-map-pin" style="color:var(--gold);font-size:10px;"></i><span class="en">Ward 13–15</span><span class="hi">वार्ड 13–15</span></span>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;">
+      <a href="bdc-members.html" class="btn btn-primary reveal">
+        <span class="en">View All Members</span><span class="hi">सभी सदस्य देखें</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     HISTORY PERSONALITIES — Dr. Rahi & Shadab Fatima
+     ============================================================ -->
+<section class="section" style="background:var(--gray-100);padding:var(--section-py) 0;" id="personalities">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label"><span class="en">Notable Personalities</span><span class="hi">उल्लेखनीय व्यक्तित्व</span></span>
+      <h2 class="section-title reveal">
+        <span class="en">Gangauli's Pride</span>
+        <span class="hi">गंगौली का गौरव</span>
+      </h2>
+      <p class="section-subtitle reveal reveal-delay-1">
+        <span class="en">Sons and daughters of Gangauli who have made the village and nation proud.</span>
+        <span class="hi">गंगौली के वो सपूत जिन्होंने गाँव और देश को गौरवान्वित किया।</span>
+      </p>
+    </div>
+
+    <div class="personality-grid reveal">
+
+      <!-- Dr. Rahi Masoom Raza -->
+      <div class="personality-card">
+        <div class="personality-img-wrap">
+          <img src="raza.jpg" alt="Dr. Rahi Masoom Raza" class="personality-img" loading="lazy" />
+          <span class="personality-era">1927 – 1992</span>
+        </div>
+        <div class="personality-body">
+          <span class="personality-tag"><span class="en">Writer · Poet</span><span class="hi">लेखक · कवि</span></span>
+          <h3 class="personality-name">
+            <span class="en">Dr. Rahi Masoom Raza</span>
+            <span class="hi">डॉ. राही मासूम रज़ा</span>
+          </h3>
+          <p class="personality-desc">
+            <span class="en">Legendary novelist, poet and screenplay writer. Author of the iconic novel <em>"Aadha Gaon"</em> and writer of the immortal TV epic <em>Mahabharat</em>.</span>
+            <span class="hi">महान उपन्यासकार, कवि और पटकथा लेखक। प्रसिद्ध उपन्यास <em>"आधा गाँव"</em> और दूरदर्शन के अमर धारावाहिक <em>महाभारत</em> के लेखक।</span>
+          </p>
+          <a href="history.html#rahi-masoom-raza" class="personality-btn">
+            <span class="en">Know More</span><span class="hi">और जानें</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Shadab Fatima -->
+      <div class="personality-card">
+        <div class="personality-img-wrap">
+          <img src="shadab.jpg" alt="Syeda Shadab Fatima" class="personality-img" loading="lazy" />
+          <span class="personality-era" style="background:var(--gold);color:var(--black);">MLA · Leader</span>
+        </div>
+        <div class="personality-body">
+          <span class="personality-tag" style="background:rgba(201,168,76,0.1);color:#a07a20;border-color:rgba(201,168,76,0.3);"><span class="en">Politician · MLA</span><span class="hi">राजनेता · विधायक</span></span>
+          <h3 class="personality-name">
+            <span class="en">Syeda Shadab Fatima</span>
+            <span class="hi">सैयदा शदाब फातिमा</span>
+          </h3>
+          <p class="personality-desc">
+            <span class="en">First female MLA from Ghazipur Sadar constituency. A trailblazer for women's empowerment in rural Uttar Pradesh.</span>
+            <span class="hi">गाजीपुर सदर विधानसभा क्षेत्र से पहली महिला विधायक। ग्रामीण उत्तर प्रदेश में महिला सशक्तिकरण की अग्रदूत।</span>
+          </p>
+          <a href="history.html#shadab-fatima" class="personality-btn" style="background:var(--gold);color:var(--black);box-shadow:0 6px 20px rgba(201,168,76,0.3);">
+            <span class="en">Know More</span><span class="hi">और जानें</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SOCIAL FEED — Official Facebook Showcase & Updates
+     ============================================================ -->
+<!-- ============================================================
+     SOCIAL FEED — Official Facebook Live Feed
+     ============================================================ -->
+<section class="social-section section" id="social-feed" style="background:#f1f5f9;padding:60px 0;">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label"><span class="en">Live Community</span><span class="hi">लाइव समुदाय</span></span>
+      <h2 class="section-title reveal">
+        <span class="en">Gangauli Times on Facebook</span>
+        <span class="hi">गंगौली टाइम्स — Facebook पेज</span>
+      </h2>
+      <p class="section-subtitle reveal reveal-delay-1">
+        <span class="en">Official live feed from facebook.com/gangaulitimes</span>
+        <span class="hi">facebook.com/gangaulitimes से सीधे लाइव पोस्ट्स एवं अपडेट्स</span>
+      </p>
+    </div>
+
+    <!-- Official Facebook Native Style Card -->
+    <div class="fb-native-card reveal">
+      <!-- Real Cover Background Photo -->
+      <div class="fb-native-cover"></div>
+
+      <!-- Card Body -->
+      <div class="fb-native-body">
+        <!-- Profile Row: Logo on left, Gangauli Times right next to it -->
+        <div class="fb-native-profile-row">
+          <img src="favicon.png" alt="Gangauli Times" class="fb-native-logo" />
+          <div class="fb-native-info">
+            <h3 class="fb-native-name">
+              <span>गंगौली टाइम्स</span>
+              <i class="fa-solid fa-circle-check" style="color:#1877F2;font-size:16px;" title="Verified Page"></i>
+            </h3>
+            <div class="fb-native-sub">Gangauli Times &bull; 4,154 followers</div>
+            <a href="https://www.facebook.com/gangaulitimes" target="_blank" rel="noopener" class="fb-native-url">
+              <i class="fa-brands fa-facebook" style="color:#1877F2;"></i> facebook.com/gangaulitimes
+            </a>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="fb-native-actions">
+          <a href="https://www.facebook.com/gangaulitimes" target="_blank" rel="noopener" class="fb-native-btn-follow">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span class="en">Follow Page</span>
+            <span class="hi">फ़ॉलो करें</span>
+          </a>
+          <a href="https://m.me/gangaulitimes" target="_blank" rel="noopener" class="fb-native-btn-msg">
+            <i class="fa-brands fa-facebook-messenger" style="color:#0084FF;"></i>
+            <span class="en">Message</span>
+            <span class="hi">संदेश</span>
+          </a>
+          <a href="https://www.facebook.com/gangaulitimes" target="_blank" rel="noopener" class="fb-native-btn-share" aria-label="Open Facebook Page" title="Open Page">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Live Facebook Timeline Embed -->
+      <div class="fb-native-frame-box">
+        <iframe
+          id="fb-live-iframe"
+          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fgangaulitimes&tabs=timeline&width=500&height=700&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false"
+          width="100%"
+          height="700"
+          style="border:none;overflow:hidden;width:100%;max-width:500px;height:700px;display:block;margin:0 auto;"
+          scrolling="no"
+          frameborder="0"
+          allowfullscreen="true"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          title="Gangauli Times Facebook Live Feed">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Centered All Posts Button -->
+    <div style="text-align:center;margin-top:28px;" class="reveal">
+      <a href="https://www.facebook.com/gangaulitimes" target="_blank" rel="noopener"
+         class="btn btn-primary" style="background:#1877F2;border-color:#1877F2;padding:12px 28px;font-size:15px;box-shadow:0 6px 20px rgba(24,119,242,0.35);">
+        <i class="fa-brands fa-facebook"></i>
+        <span class="en">Open Facebook Page</span>
+        <span class="hi">Facebook पर पूरा पेज खोलें</span>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div>
+        <img src="logo_full.png" alt="Gangauli Times" class="footer-logo-img" />
+        <p class="footer-desc">
+          <span class="en">Gangauli is a historic village in Ghazipur district, Uttar Pradesh — famous as the birthplace of Dr. Rahi Masoom Raza and the backdrop of his iconic novel 'Aadha Gaon'. Known for its rich cultural heritage and literary significance.</span>
+          <span class="hi">गंगौली गाजीपुर जिले, उत्तर प्रदेश का एक ऐतिहासिक गाँव है, जो डॉ. राही मासूम रज़ा के जन्मस्थान और उनके प्रसिद्ध उपन्यास 'आधा गाँव' की पृष्ठभूमि के रूप में प्रसिद्ध है। अपनी समृद्ध सांस्कृतिक विरासत और साहित्यिक महत्व के लिए जाना जाता है।</span>
+        </p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/gangaulitimes" target="_blank" rel="noopener" class="footer-social-btn facebook" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/gangaulitimes" target="_blank" rel="noopener" class="footer-social-btn instagram" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/@GangauliTimes" target="_blank" rel="noopener" class="footer-social-btn youtube" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="footer-heading"><span class="en">Quick Links</span><span class="hi">त्वरित लिंक</span></h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><span class="en">Home</span><span class="hi">होम</span></a></li>
+          <li><a href="gram-pradhan.html"><span class="en">Gram Pradhan</span><span class="hi">ग्राम प्रधान</span></a></li>
+          <li><a href="bdc-members.html"><span class="en">BDC Members</span><span class="hi">बी.डी.सी. सदस्य</span></a></li>
+          <li><a href="history.html"><span class="en">Village History</span><span class="hi">गाँव का इतिहास</span></a></li>
+          <li><a href="schools.html"><span class="en">Schools</span><span class="hi">स्कूल</span></a></li>
+          <li><a href="contact.html"><span class="en">Contact</span><span class="hi">संपर्क करें</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Pages -->
+      <div>
+        <h4 class="footer-heading"><span class="en">Explore</span><span class="hi">अन्वेषण करें</span></h4>
+        <ul class="footer-links">
+          <li><a href="gallery.html"><span class="en">Photo Gallery</span><span class="hi">फोटो गैलरी</span></a></li>
+          <li><a href="history.html"><span class="en">Dr. Rahi Masoom Raza</span><span class="hi">डॉ. राही मासूम रज़ा</span></a></li>
+          <li><a href="history.html#culture"><span class="en">Culture &amp; Heritage</span><span class="hi">संस्कृति और विरासत</span></a></li>
+          <li><a href="bdc-members.html"><span class="en">Ward Representatives</span><span class="hi">वार्ड प्रतिनिधि</span></a></li>
+          <li><a href="schools.html"><span class="en">Education</span><span class="hi">शिक्षा</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="footer-heading"><span class="en">Contact Us</span><span class="hi">संपर्क करें</span></h4>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="footer-contact-text">
+            <span class="en">Gram &amp; Post Gangauli, Block Kasimabad, District Ghazipur, Uttar Pradesh — 233222</span>
+            <span class="hi">ग्राम व पोस्ट गंगौली, ब्लॉक कासिमाबाद, जिला गाजीपुर, उत्तर प्रदेश — 233222</span>
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="footer-contact-text">info.gangaulitimes@gmail.com</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+      <span>
+        <span class="en">&copy; 2025 Gangauli Times. All rights reserved.</span>
+        <span class="hi">&copy; 2025 गंगौली टाइम्स। सर्वाधिकार सुरक्षित।</span>
+      </span>
+      <span>
+        <span class="en">Made with <span style="color:var(--red-primary);">&#10084;</span> for Gangauli</span>
+        <span class="hi">गंगौली के लिए <span style="color:var(--red-primary);">&#10084;</span> से बनाया गया</span>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="back-to-top" aria-label="Back to Top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<script>
+  // Date display
+  const d = new Date();
+  const opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const topbarDateEl = document.getElementById('topbar-date');
+  if (topbarDateEl) topbarDateEl.textContent = d.toLocaleDateString('hi-IN', opts);
+</script>
+<script src="main.js"></script>
+</body>
+</html>
+
+
+
+

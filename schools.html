@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schools &amp; Education — Gangauli Times</title>
+  <meta name="description" content="All schools and educational institutions in Gangauli — primary schools, madrasas, colleges, and private schools in Ghazipur, UP." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+</head>
+<body class="lang-hi">
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
+    <div class="container">
+      <a href="index.html" class="navbar-brand" aria-label="Gangauli Times Home">
+        <img src="logo.png" alt="Gangauli Times Logo" class="navbar-logo" />
+      </a>
+      <ul class="navbar-nav">
+        <li><a href="index.html" class="nav-link"><span class="en">Home</span><span class="hi">होम</span></a></li>
+        <li><a href="gram-pradhan.html" class="nav-link"><span class="en">Gram Pradhan</span><span class="hi">ग्राम प्रधान</span></a></li>
+        <li><a href="bdc-members.html" class="nav-link"><span class="en">BDC Members</span><span class="hi">बी.डी.सी. सदस्य</span></a></li>
+        <li><a href="history.html" class="nav-link"><span class="en">Village History</span><span class="hi">गाँव का इतिहास</span></a></li>
+        <li><a href="schools.html" class="nav-link active"><span class="en">Schools</span><span class="hi">स्कूल</span></a></li>
+        <li><a href="gallery.html" class="nav-link"><span class="en">Gallery</span><span class="hi">गैलरी</span></a></li>
+        <li><a href="contact.html" class="nav-link"><span class="en">Contact</span><span class="hi">संपर्क करें</span></a></li>
+      </ul>
+      <div class="navbar-lang" id="navbar-lang">
+        <button class="nav-lang-btn" id="lang-en" title="English">EN</button>
+        <span class="nav-lang-divider">|</span>
+        <button class="nav-lang-btn active" id="lang-hi" title="हिंदी">HI</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Mobile Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="index.html" class="nav-link"><span class="en">Home</span><span class="hi">होम</span></a>
+      <a href="gram-pradhan.html" class="nav-link"><span class="en">Gram Pradhan</span><span class="hi">ग्राम प्रधान</span></a>
+      <a href="bdc-members.html" class="nav-link"><span class="en">BDC Members</span><span class="hi">बी.डी.सी. सदस्य</span></a>
+      <a href="history.html" class="nav-link"><span class="en">Village History</span><span class="hi">गाँव का इतिहास</span></a>
+      <a href="schools.html" class="nav-link"><span class="en">Schools</span><span class="hi">स्कूल</span></a>
+      <a href="gallery.html" class="nav-link"><span class="en">Gallery</span><span class="hi">गैलरी</span></a>
+      <a href="contact.html" class="nav-link"><span class="en">Contact</span><span class="hi">संपर्क करें</span></a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <div class="page-hero-breadcrumb">
+        <a href="index.html"><span class="en">Home</span><span class="hi">होम</span></a><span>/</span>
+        <span class="en">Schools</span><span class="hi">स्कूल</span>
+      </div>
+      <h1><span class="en">Schools &amp; Education</span><span class="hi">स्कूल और शिक्षा</span></h1>
+      <p>
+        <span class="en">Gangauli's educational landscape — primary schools, madrasas, colleges and private institutions.</span>
+        <span class="hi">गंगौली का शैक्षणिक परिदृश्य — प्राथमिक विद्यालय, मदरसे, कॉलेज और निजी संस्थान।</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- STATS BANNER -->
+  <section style="background:var(--white);padding:50px 0;border-bottom:1px solid var(--gray-200);">
+    <div class="container">
+      <div class="schools-stats-box" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+        <div style="text-align:center;padding:28px;background:var(--gray-100);border-radius:16px;border-bottom:4px solid var(--red-primary);" class="reveal reveal-delay-1">
+          <div style="font-size:52px;font-weight:900;color:var(--red-primary);font-family:'Playfair Display',serif;line-height:1;">2</div>
+          <div style="font-size:14px;color:var(--gray-500);font-weight:600;margin-top:8px;">
+            <span class="en">Primary Schools</span><span class="hi">प्राथमिक विद्यालय</span>
+          </div>
+        </div>
+        <div style="text-align:center;padding:28px;background:var(--gray-100);border-radius:16px;border-bottom:4px solid var(--gold);" class="reveal reveal-delay-2">
+          <div style="font-size:52px;font-weight:900;color:var(--red-primary);font-family:'Playfair Display',serif;line-height:1;">2</div>
+          <div style="font-size:14px;color:var(--gray-500);font-weight:600;margin-top:8px;">
+            <span class="en">Madrasas</span><span class="hi">मदरसे</span>
+          </div>
+        </div>
+        <div style="text-align:center;padding:28px;background:var(--gray-100);border-radius:16px;border-bottom:4px solid var(--red-primary);" class="reveal reveal-delay-3">
+          <div style="font-size:52px;font-weight:900;color:var(--red-primary);font-family:'Playfair Display',serif;line-height:1;">2</div>
+          <div style="font-size:14px;color:var(--gray-500);font-weight:600;margin-top:8px;">
+            <span class="en">Colleges</span><span class="hi">कॉलेज</span>
+          </div>
+        </div>
+        <div style="text-align:center;padding:28px;background:var(--gray-100);border-radius:16px;border-bottom:4px solid var(--gold);" class="reveal reveal-delay-4">
+          <div style="font-size:52px;font-weight:900;color:var(--red-primary);font-family:'Playfair Display',serif;line-height:1;">5</div>
+          <div style="font-size:14px;color:var(--gray-500);font-weight:600;margin-top:8px;">
+            <span class="en">Other Schools</span><span class="hi">अन्य स्कूल</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHOOLS LIST — Photo Card Grid -->
+  <section class="section section-bg-gray">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label"><span class="en">All Institutions</span><span class="hi">सभी संस्थान</span></span>
+        <h2 class="section-title reveal">
+          <span class="en">Gangauli's Schools</span>
+          <span class="hi">गंगौली के शैक्षणिक संस्थान</span>
+        </h2>
+        <p class="section-subtitle reveal reveal-delay-1">
+          <span class="en">All 11 educational institutions serving the students of Gangauli village.</span>
+          <span class="hi">गंगौली गाँव के विद्यार्थियों की सेवा करने वाले सभी 11 शैक्षणिक संस्थान।</span>
+        </p>
+      </div>
+
+      <!-- 2-Column Photo Card Grid -->
+      <div class="school-photo-grid">
+
+        <!-- 1. Primary School I -->
+        <div class="school-photo-card reveal">
+          <div class="school-photo-wrap">
+            <img src="school-primary1.jpg" alt="प्राथमिक विद्यालय प्रथम गंगौली" class="school-photo-img" loading="lazy" />
+            <span class="school-photo-badge" style="background:var(--red-primary);">
+              <i class="fa-solid fa-school"></i>
+              <span class="en">Primary</span><span class="hi">प्राथमिक</span>
+            </span>
+          </div>
+          <div class="school-photo-body">
+            <h3 class="school-photo-name">
+              <span class="en">Primary School Gangauli — I</span>
+              <span class="hi">प्राथमिक विद्यालय प्रथम गंगौली</span>
+            </h3>
+            <p class="school-photo-desc">
+              <span class="en">Government primary school for Classes 1–5, serving the northern wards of Gangauli. Established under the Basic Education Department, Uttar Pradesh. Mid-day meal and free textbooks provided.</span>
+              <span class="hi">कक्षा 1–5 के लिए सरकारी प्राथमिक विद्यालय, गंगौली के उत्तरी वार्डों की सेवा। बेसिक शिक्षा विभाग, उ.प्र. के अंतर्गत स्थापित। मध्याह्न भोजन और मुफ्त पुस्तकें प्रदान की जाती हैं।</span>
+            </p>
+            <div class="school-photo-tags">
+              <span class="school-tag red"><i class="fa-solid fa-user-graduate"></i> <span class="en">Govt.</span><span class="hi">सरकारी</span></span>
+              <span class="school-tag gray"><i class="fa-solid fa-book"></i> <span class="en">Class 1–5</span><span class="hi">कक्षा 1–5</span></span>
+              <span class="school-tag gray"><i class="fa-solid fa-language"></i> Hindi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Primary School II -->
+        <div class="school-photo-card reveal reveal-delay-1">
+          <div class="school-photo-wrap">
+            <img src="school-primary2.jpg" alt="प्राथमिक विद्यालय द्वितीय गंगौली" class="school-photo-img" loading="lazy" />
+            <span class="school-photo-badge" style="background:var(--red-primary);">
+              <i class="fa-solid fa-school"></i>
+              <span class="en">Primary</span><span class="hi">प्राथमिक</span>
+            </span>
+          </div>
+          <div class="school-photo-body">
+            <h3 class="school-photo-name">
+              <span class="en">Primary School Gangauli — II</span>
+              <span class="hi">प्राथमिक विद्यालय द्वितीय गंगौली</span>
+            </h3>
+            <p class="school-photo-desc">
+              <span class="en">Second government primary school catering to southern &amp; central wards. Provides mid-day meal and free textbooks under the Right to Education Act.</span>
+              <span class="hi">दक्षिणी और मध्य वार्डों के लिए दूसरा सरकारी प्राथमिक विद्यालय। शिक्षा अधिकार अधिनियम के अंतर्गत मध्याह्न भोजन और मुफ्त पुस्तकें उपलब्ध।</span>
+            </p>
+            <div class="school-photo-tags">
+              <span class="school-tag red"><i class="fa-solid fa-user-graduate"></i> <span class="en">Govt.</span><span class="hi">सरकारी</span></span>
+              <span class="school-tag gray"><i class="fa-solid fa-book"></i> <span class="en">Class 1–5</span><span class="hi">कक्षा 1–5</span></span>
+              <span class="school-tag gray"><i class="fa-solid fa-utensils"></i> <span class="en">Mid-Day Meal</span><span class="hi">मध्याह्न भोजन</span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Madhyamik Vidyalaya Gangauli -->
+        <div class="school-photo-card reveal reveal-delay-2">
+          <div class="school-photo-wrap">
+            <img src="school-madhyamik.jpg" alt="माध्यमिक विद्यालय गंगौली" class="school-photo-img" loading="lazy" />
+            <span class="school-photo-badge" style="background:#1a1a7e;">
+              <i class="fa-solid fa-chalkboard"></i>
+              <span class="en">Secondary</span><span class="hi">माध्यमिक</span>
+            </span>
+          </div>
+          <div class="school-photo-body">
+            <h3 class="school-photo-name">
+              <span class="en">Madhyamik Vidyalaya Gangauli</span>
+              <span class="hi">माध्यमिक विद्यालय गंगौली</span>
+            </h3>
+            <p class="school-photo-desc">
+              <span class="en">Government secondary school for Classes 6–10, affiliated with UP Board. Provides quality education to students of Gangauli and surrounding villages.</span>
+              <span class="hi">कक्षा 6–10 का सरकारी माध्यमिक विद्यालय, उ.प्र. बोर्ड से संबद्ध। गंगौली और आसपास के गाँवों के विद्यार्थियों को गुणवत्तापूर्ण शिक्षा प्रदान करता है।</span>
+            </p>
+            <div class="school-photo-tags">
+              <span class="school-tag blue"><i class="fa-solid fa-building-columns"></i> <span class="en">Govt.</span><span class="hi">सरकारी</span></span>
+              <span class="school-tag gray"><i class="fa-solid fa-book"></i> <span class="en">Class 6–10</span><span class="hi">कक्षा 6–10</span></span>
+              <span class="school-tag gray"><i class="fa-solid fa-certificate"></i> UP Board</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Madrasa Arabiya Zia-ul-Uloom -->
+        <div class="school-photo-card reveal reveal-delay-3">
+          <div class="school-photo-wrap">
+            <img src="school-madrasa-zia.jpg" alt="मदरसा अरबिया ज़िया-उल-उलूम गंगौली" class="school-photo-img" loading="lazy" />
+            <span class="school-photo-badge" style="background:#1a6035;">
+              <i class="fa-solid fa-mosque"></i>
+              <span class="en">Madrasa</span><span class="hi">मदरसा</span>
+            </span>
+          </div>
+          <div class="school-photo-body">
+            <h3 class="school-photo-name">
+              <span class="en">Madrasa Arabiya Zia-ul-Uloom Gangauli</span>
+              <span class="hi">मदरसा अरबिया ज़िया-उल-उलूम गंगौली</span>
+            </h3>
+            <p class="school-photo-desc">
+              <span class="en">Traditional Islamic institution offering religious education in Arabic, Urdu &amp; Islamic studies. Affiliated with UP Madrasa Education Board.</span>
+              <span class="hi">अरबी, उर्दू और इस्लामी शिक्षा प्रदान करने वाली पारंपरिक संस्था। उ.प्र. मदरसा शिक्षा बोर्ड से संबद्ध।</span>
+            </p>
+            <div class="school-photo-tags">
+              <span class="school-tag green"><i class="fa-solid fa-star-and-crescent"></i> <span class="en">Religious</span><span class="hi">धार्मिक</span></span>
+              <span class="school-tag gray"><i class="fa-solid fa-language"></i> Urdu / Arabic</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Madrasa Arabiya Ehya-ul-Uloom -->
+        <div class="school-photo-card reveal">
+          <div class="school-photo-wrap">
+            <img src="school-madrasa-ehya.jpg" alt="मदरसा अरबिया एहया-उल-उलूम गंगौली" class="school-photo-img" loading="lazy" />
+            <span class="school-photo-badge" style="background:#1a6035;">
+              <i class="fa-solid fa-mosque"></i>
+              <span class="en">Madrasa</span><span class="hi">मदरसा</span>
+            </span>
+          </div>
+          <div class="school-photo-body">
+            <h3 class="school-photo-name">
+              <span class="en">Madrasa Arabiya Ehya-ul-Uloom Gangauli</span>
+              <span class="hi">मदरसा अरबिया एहया-उल-उलूम गंगौली</span>
+            </h3>
+            <p class="school-photo-desc">
+              <span class="en">Islamic &amp; general education from Maktab to Alim level. Known for combining traditional Islamic learning with modern academic subjects.</span>
+              <span class="hi">मकतब से आलिम स्तर तक इस्लामी और सामान्य शिक्षा। परंपरागत इस्लामी शिक्षा और आधुनिक विषयों के संयोजन के लिए जाना जाता है।</span>
+            </p>
+            <div class="school-photo-tags">
+              <span class="school-tag green"><i class="fa-solid fa-star-and-crescent"></i> <span class="en">Religious</span><span class="hi">धार्मिक</span></span>
+              <span class="school-tag gray"><i class="fa-solid fa-certificate"></i> <span class="en">Maktab–Alim</span><span class="hi">मकतब–आलिम</span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Sunbeam Academy -->
+        <div class="school-photo-card reveal reveal-delay-1">
+          <div class="school-photo-wrap">
+            <img src="school-sunbeam.jpg" alt="सनबीम एकेडमी गंगौली" class="school-photo-img" loading="lazy" />
+            <span class="school-photo-badge" style="background:#7e4f1a;">
+              <i class="fa-solid fa-chalkboard-teacher"></i>
+              <span class="en">Private</span><span class="hi">निजी</span>
+            </span>
+          </div>
+          <div class="school-photo-body">
+            <h3 class="school-photo-name">
+              <span class="en">Sunbeam Academy Gangauli</span>
+              <span class="hi">सनबीम एकेडमी गंगौली</span>
+            </h3>
+            <p class="school-photo-desc">
+              <span class="en">English-medium private school offering quality education from Nursery to Class 8. Known for its experienced faculty, annual sports events and cultural programs.</span>
+              <span class="hi">नर्सरी से कक्षा 8 तक गुणवत्तापूर्ण शिक्षा प्रदान करने वाला अंग्रेजी माध्यम निजी विद्यालय। अनुभवी शिक्षक, वार्षिक खेल उत्सव और सांस्कृतिक कार्यक्रमों के लिए जाना जाता है।</span>
+            </p>
+            <div class="school-photo-tags">
+              <span class="school-tag gold"><i class="fa-solid fa-language"></i> <span class="en">English Medium</span><span class="hi">अंग्रेजी माध्यम</span></span>
+              <span class="school-tag gray"><i class="fa-solid fa-book"></i> <span class="en">Nursery–Class 8</span><span class="hi">नर्सरी–8</span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Janta Adarsh Inter College Mubarakpur -->
+        <div class="school-photo-card reveal reveal-delay-2">
+          <div class="school-photo-wrap">
+            <img src="school-jaic.jpg" alt="जनता आदर्श इंटर कॉलेज मुबारकपुर गंगौली" class="school-photo-img" loading="lazy" />
+            <span class="school-photo-badge" style="background:#1a1a7e;">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span class="en">Inter College</span><span class="hi">इंटर कॉलेज</span>
+            </span>
+          </div>
+          <div class="school-photo-body">
+            <h3 class="school-photo-name">
+              <span class="en">Janta Adarsh Inter College Mubarakpur Gangauli</span>
+              <span class="hi">जनता आदर्श इंटर कॉलेज मुबारकपुर गंगौली</span>
+            </h3>
+            <p class="school-photo-desc">
+              <span class="en">Inter College in Mubarakpur area offering Classes 6–12. Affiliated with UP Board, known for academic results and student development activities.</span>
+              <span class="hi">मुबारकपुर क्षेत्र में कक्षा 6–12 का इंटर कॉलेज। उ.प्र. बोर्ड से संबद्ध, शैक्षणिक परिणामों और छात्र विकास गतिविधियों के लिए प्रसिद्ध।</span>
+            </p>
+            <div class="school-photo-tags">
+              <span class="school-tag blue"><i class="fa-solid fa-building-columns"></i> <span class="en">Inter College</span><span class="hi">इंटर कॉलेज</span></span>
+              <span class="school-tag gray"><i class="fa-solid fa-book"></i> <span class="en">Class 6–12</span><span class="hi">कक्षा 6–12</span></span>
+              <span class="school-tag gray"><i class="fa-solid fa-certificate"></i> UP Board</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Janta Adarsh Mahavidyalaya Maksudanpur -->
+        <div class="school-photo-card reveal reveal-delay-3">
+          <div class="school-photo-wrap">
+            <img src="school-mahavidya.jpg" alt="जनता आदर्श महाविद्यालय मकसूदनपुर गंगौली" class="school-photo-img" loading="lazy" />
+            <span class="school-photo-badge" style="background:#1a1a7e;">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span class="en">Degree College</span><span class="hi">महाविद्यालय</span>
+            </span>
+          </div>
+          <div class="school-photo-body">
+            <h3 class="school-photo-name">
+              <span class="en">Janta Adarsh Mahavidyalaya Maksudanpur Gangauli</span>
+              <span class="hi">जनता आदर्श महाविद्यालय मकसूदनपुर गंगौली</span>
+            </h3>
+            <p class="school-photo-desc">
+              <span class="en">Degree college in Maksudanpur area offering graduation programs in Arts, Science &amp; Commerce. Affiliated with Veer Bahadur Singh Purvanchal University.</span>
+              <span class="hi">मकसूदनपुर क्षेत्र में स्नातक कार्यक्रम — कला, विज्ञान और वाणिज्य। वीर बहादुर सिंह पूर्वांचल विश्वविद्यालय से संबद्ध।</span>
+            </p>
+            <div class="school-photo-tags">
+              <span class="school-tag blue"><i class="fa-solid fa-building-columns"></i> <span class="en">Degree</span><span class="hi">डिग्री</span></span>
+              <span class="school-tag gray"><i class="fa-solid fa-book"></i> B.A. / B.Sc. / B.Com</span>
+              <span class="school-tag gray">VBSPU</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. JD Public School Mubarakpur -->
+        <div class="school-photo-card reveal">
+          <div class="school-photo-wrap">
+            <img src="school1.png" alt="जेडी पब्लिक स्कूल मुबारकपुर गंगौली" class="school-photo-img" loading="lazy" />
+            <span class="school-photo-badge" style="background:#7e4f1a;">
+              <i class="fa-solid fa-chalkboard-teacher"></i>
+              <span class="en">Private</span><span class="hi">निजी</span>
+            </span>
+          </div>
+          <div class="school-photo-body">
+            <h3 class="school-photo-name">
+              <span class="en">JD Public School Mubarakpur Gangauli</span>
+              <span class="hi">जेडी पब्लिक स्कूल मुबारकपुर गंगौली</span>
+            </h3>
+            <p class="school-photo-desc">
+              <span class="en">English-medium private school in Mubarakpur area providing modern education from Nursery to Class 10 with focus on overall student development.</span>
+              <span class="hi">मुबारकपुर क्षेत्र में अंग्रेजी माध्यम का निजी विद्यालय — नर्सरी से कक्षा 10 तक। छात्रों के सर्वांगीण विकास पर विशेष ध्यान।</span>
+            </p>
+            <div class="school-photo-tags">
+              <span class="school-tag gold"><i class="fa-solid fa-language"></i> <span class="en">English Medium</span><span class="hi">अंग्रेजी माध्यम</span></span>
+              <span class="school-tag gray"><i class="fa-solid fa-book"></i> <span class="en">Nursery–Class 10</span><span class="hi">नर्सरी–10</span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. SAARC Public School Mubarakpur -->
+        <div class="school-photo-card reveal reveal-delay-1">
+          <div class="school-photo-wrap">
+            <img src="school-sark.jpg" alt="सार्क पब्लिक स्कूल मुबारकपुर गंगौली" class="school-photo-img" loading="lazy" />
+            <span class="school-photo-badge" style="background:#7e4f1a;">
+              <i class="fa-solid fa-chalkboard-teacher"></i>
+              <span class="en">Private</span><span class="hi">निजी</span>
+            </span>
+          </div>
+          <div class="school-photo-body">
+            <h3 class="school-photo-name">
+              <span class="en">SAARC Public School Mubarakpur Gangauli</span>
+              <span class="hi">सार्क पब्लिक स्कूल मुबारकपुर गंगौली</span>
+            </h3>
+            <p class="school-photo-desc">
+              <span class="en">Quality private school in Mubarakpur offering holistic education from Nursery to Class 12, with modern facilities and dedicated teaching staff.</span>
+              <span class="hi">मुबारकपुर में गुणवत्तापूर्ण निजी विद्यालय — नर्सरी से कक्षा 12 तक समग्र शिक्षा, आधुनिक सुविधाएँ और समर्पित शिक्षक दल।</span>
+            </p>
+            <div class="school-photo-tags">
+              <span class="school-tag gold"><i class="fa-solid fa-language"></i> <span class="en">English Medium</span><span class="hi">अंग्रेजी माध्यम</span></span>
+              <span class="school-tag gray"><i class="fa-solid fa-book"></i> <span class="en">Nursery–Class 12</span><span class="hi">नर्सरी–12</span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11. Kasturba Gandhi Residential Girls School -->
+        <div class="school-photo-card reveal reveal-delay-2">
+          <div class="school-photo-wrap">
+            <img src="school-kasturba.jpg" alt="कस्तूरबा गांधी आवासीय बालिका विद्यालय गंगौली" class="school-photo-img" loading="lazy" />
+            <span class="school-photo-badge" style="background:#8e1a6e;">
+              <i class="fa-solid fa-house-heart"></i>
+              <span class="en">Residential</span><span class="hi">आवासीय</span>
+            </span>
+          </div>
+          <div class="school-photo-body">
+            <h3 class="school-photo-name">
+              <span class="en">Kasturba Gandhi Residential Girls School Gangauli</span>
+              <span class="hi">कस्तूरबा गांधी आवासीय बालिका विद्यालय गंगौली</span>
+            </h3>
+            <p class="school-photo-desc">
+              <span class="en">Government residential school exclusively for girls from Classes 6–8. Provides free boarding, meals, uniform &amp; education to girls from underprivileged backgrounds under the KGBV scheme.</span>
+              <span class="hi">कक्षा 6–8 की छात्राओं के लिए सरकारी आवासीय विद्यालय। केजीबीवी योजना के अंतर्गत वंचित परिवारों की बालिकाओं को मुफ्त आवास, भोजन, वर्दी और शिक्षा।</span>
+            </p>
+            <div class="school-photo-tags">
+              <span class="school-tag red"><i class="fa-solid fa-user-graduate"></i> <span class="en">Govt.</span><span class="hi">सरकारी</span></span>
+              <span class="school-tag gray"><i class="fa-solid fa-book"></i> <span class="en">Class 6–8 (Girls)</span><span class="hi">कक्षा 6–8 (बालिका)</span></span>
+              <span class="school-tag gray"><i class="fa-solid fa-house"></i> <span class="en">Residential</span><span class="hi">आवासीय</span></span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end school-photo-grid -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="logo_full.png" alt="Gangauli Times" class="footer-logo-img" />
+          <p class="footer-desc">
+            <span class="en">Gangauli is a historic village in Ghazipur district, Uttar Pradesh — famous as the birthplace of Dr. Rahi Masoom Raza and the backdrop of his iconic novel 'Aadha Gaon'.</span>
+            <span class="hi">गंगौली गाजीपुर जिले, उत्तर प्रदेश का एक ऐतिहासिक गाँव है, जो डॉ. राही मासूम रज़ा के जन्मस्थान और उनके प्रसिद्ध उपन्यास 'आधा गाँव' की पृष्ठभूमि के रूप में प्रसिद्ध है।</span>
+          </p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/gangaulitimes" target="_blank" rel="noopener" class="footer-social-btn facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/gangaulitimes" target="_blank" rel="noopener" class="footer-social-btn instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@GangauliTimes" target="_blank" rel="noopener" class="footer-social-btn youtube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading"><span class="en">Quick Links</span><span class="hi">त्वरित लिंक</span></h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><span class="en">Home</span><span class="hi">होम</span></a></li>
+            <li><a href="gram-pradhan.html"><span class="en">Gram Pradhan</span><span class="hi">ग्राम प्रधान</span></a></li>
+            <li><a href="bdc-members.html"><span class="en">BDC Members</span><span class="hi">बी.डी.सी. सदस्य</span></a></li>
+            <li><a href="history.html"><span class="en">Village History</span><span class="hi">गाँव का इतिहास</span></a></li>
+            <li><a href="schools.html"><span class="en">Schools</span><span class="hi">स्कूल</span></a></li>
+            <li><a href="contact.html"><span class="en">Contact</span><span class="hi">संपर्क करें</span></a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading"><span class="en">Explore</span><span class="hi">अन्वेषण करें</span></h4>
+          <ul class="footer-links">
+            <li><a href="gallery.html"><span class="en">Photo Gallery</span><span class="hi">फोटो गैलरी</span></a></li>
+            <li><a href="history.html"><span class="en">Village History</span><span class="hi">गाँव का इतिहास</span></a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading"><span class="en">Contact Us</span><span class="hi">संपर्क करें</span></h4>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="footer-contact-text">
+              <span class="en">Gram &amp; Post Gangauli, Block Kasimabad, District Ghazipur, Uttar Pradesh — 233222</span>
+              <span class="hi">ग्राम व पोस्ट गंगौली, ब्लॉक कासिमाबाद, जिला गाजीपुर, उत्तर प्रदेश — 233222</span>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="footer-contact-text">info.gangaulitimes@gmail.com</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+        <span><span class="en">&copy; 2025 Gangauli Times. All rights reserved.</span><span class="hi">&copy; 2025 गंगौली टाइम्स। सर्वाधिकार सुरक्षित।</span></span>
+        <span><span class="en">Made with <span style="color:var(--red-primary);">&#10084;</span> for Gangauli</span><span class="hi">गंगौली के लिए <span style="color:var(--red-primary);">&#10084;</span> से बनाया गया</span></span>
+      </div>
+    </div>
+  </footer>
+  <button class="back-to-top" id="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-chevron-up"></i></button>
+  <script src="main.js"></script>
+</body>
+</html>
